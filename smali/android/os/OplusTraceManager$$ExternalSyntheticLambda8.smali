@@ -1,0 +1,26 @@
+.class public final synthetic Landroid/os/OplusTraceManager$$ExternalSyntheticLambda8;
+.super Ljava/lang/Object;
+.source "D8$$SyntheticClass"
+
+# interfaces
+.implements Landroid/os/TraceBuffer$FlushOutObserver;
+
+
+# direct methods
+.method public synthetic constructor blacklist <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final blacklist flushOut([B)V
+    .locals 0
+
+    invoke-static {p1}, Landroid/os/OplusTraceManager;->lambda$static$3([B)V
+
+    return-void
+.end method

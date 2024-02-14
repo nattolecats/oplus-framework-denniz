@@ -1,0 +1,140 @@
+.class public Landroid/hardware/alipay/IAlipayService$Default;
+.super Ljava/lang/Object;
+.source "IAlipayService.java"
+
+# interfaces
+.implements Landroid/hardware/alipay/IAlipayService;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Landroid/hardware/alipay/IAlipayService;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x9
+    name = "Default"
+.end annotation
+
+
+# direct methods
+.method public constructor blacklist <init>()V
+    .locals 0
+
+    .line 12
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public blacklist alipayInvokeCommand([B)[B
+    .locals 1
+    .param p1, "inbuf"    # [B
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 16
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public whitelist asBinder()Landroid/os/IBinder;
+    .locals 1
+
+    .line 45
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public blacklist cancel(Ljava/lang/String;)I
+    .locals 1
+    .param p1, "reqId"    # Ljava/lang/String;
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 20
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public blacklist getDeviceModel()Ljava/lang/String;
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 33
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public blacklist getFingerprintIconDiameter()I
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 37
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public blacklist getFingerprintIconExternalCircleXY(Ljava/lang/String;)I
+    .locals 1
+    .param p1, "coord"    # Ljava/lang/String;
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 41
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public blacklist getSupportBIOTypes()I
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 25
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public blacklist getSupportIFAAVersion()I
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 29
+    const/4 v0, 0x0
+
+    return v0
+.end method
