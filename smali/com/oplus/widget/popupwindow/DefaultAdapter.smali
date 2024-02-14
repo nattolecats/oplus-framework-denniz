@@ -292,11 +292,11 @@
 
     move-result-object v1
 
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v1
 
-    iget v1, v1, Landroid/content/res/Configuration;->fontScale:F
+    iget v1, v1, Landroid/content/res/OplusBaseConfiguration;->fontScale:F
 
     .line 126
     const/4 v2, 0x5

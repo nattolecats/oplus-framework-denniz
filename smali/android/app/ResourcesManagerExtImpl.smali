@@ -102,9 +102,9 @@
     return-object v0
 .end method
 
-.method public static blacklist inOplusCompatMode(Landroid/content/res/Configuration;)Z
+.method public static blacklist inOplusCompatMode(Landroid/content/res/OplusBaseConfiguration;)Z
     .locals 3
-    .param p0, "config"    # Landroid/content/res/Configuration;
+    .param p0, "config"    # Landroid/content/res/OplusBaseConfiguration;
 
     .line 130
     const-class v0, Landroid/content/res/OplusBaseConfiguration;
@@ -162,9 +162,9 @@
 
 
 # virtual methods
-.method public blacklist applyConfigurationToResources(Landroid/content/res/Configuration;I)V
+.method public blacklist applyConfigurationToResources(Landroid/content/res/OplusBaseConfiguration;I)V
     .locals 2
-    .param p1, "config"    # Landroid/content/res/Configuration;
+    .param p1, "config"    # Landroid/content/res/OplusBaseConfiguration;
     .param p2, "change"    # I
 
     .line 98
@@ -180,16 +180,16 @@
 
     check-cast v0, Landroid/app/IOplusCommonInjector;
 
-    invoke-interface {v0, p1, p2}, Landroid/app/IOplusCommonInjector;->applyConfigurationToResourcesForResourcesManager(Landroid/content/res/Configuration;I)V
+    invoke-interface {v0, p1, p2}, Landroid/app/IOplusCommonInjector;->applyConfigurationToResourcesForResourcesManager(Landroid/content/res/OplusBaseConfiguration;I)V
 
     .line 99
     return-void
 .end method
 
-.method public blacklist canOverrideConfig(Landroid/content/res/Configuration;Landroid/content/res/Configuration;)Z
+.method public blacklist canOverrideConfig(Landroid/content/res/OplusBaseConfiguration;Landroid/content/res/OplusBaseConfiguration;)Z
     .locals 1
-    .param p1, "config"    # Landroid/content/res/Configuration;
-    .param p2, "mOverrideConfiguration"    # Landroid/content/res/Configuration;
+    .param p1, "config"    # Landroid/content/res/OplusBaseConfiguration;
+    .param p2, "mOverrideConfiguration"    # Landroid/content/res/OplusBaseConfiguration;
 
     .line 193
     iget-object v0, p0, Landroid/app/ResourcesManagerExtImpl;->mCompactWindowAppManager:Landroid/app/IOplusCompactWindowAppManager;
@@ -197,7 +197,7 @@
     if-eqz v0, :cond_0
 
     .line 194
-    invoke-interface {v0, p1, p2}, Landroid/app/IOplusCompactWindowAppManager;->canOverrideConfig(Landroid/content/res/Configuration;Landroid/content/res/Configuration;)Z
+    invoke-interface {v0, p1, p2}, Landroid/app/IOplusCompactWindowAppManager;->canOverrideConfig(Landroid/content/res/OplusBaseConfiguration;Landroid/content/res/OplusBaseConfiguration;)Z
 
     move-result v0
 
@@ -210,10 +210,10 @@
     return v0
 .end method
 
-.method public blacklist canUseOverlayConfiguration(Landroid/content/res/ResourcesKey;Landroid/content/res/Configuration;)Z
+.method public blacklist canUseOverlayConfiguration(Landroid/content/res/ResourcesKey;Landroid/content/res/OplusBaseConfiguration;)Z
     .locals 9
     .param p1, "resourcesKey"    # Landroid/content/res/ResourcesKey;
-    .param p2, "configuration"    # Landroid/content/res/Configuration;
+    .param p2, "configuration"    # Landroid/content/res/OplusBaseConfiguration;
 
     .line 140
     invoke-static {}, Landroid/app/ActivityThread;->currentActivityThread()Landroid/app/ActivityThread;
@@ -254,11 +254,11 @@
 
     .line 144
     :cond_2
-    iget-object v0, p1, Landroid/content/res/ResourcesKey;->mOverrideConfiguration:Landroid/content/res/Configuration;
+    iget-object v0, p1, Landroid/content/res/ResourcesKey;->mOverrideConfiguration:Landroid/content/res/OplusBaseConfiguration;
 
     .line 145
-    .local v0, "overlayConfig":Landroid/content/res/Configuration;
-    invoke-virtual {v0, p2}, Landroid/content/res/Configuration;->diff(Landroid/content/res/Configuration;)I
+    .local v0, "overlayConfig":Landroid/content/res/OplusBaseConfiguration;
+    invoke-virtual {v0, p2}, Landroid/content/res/OplusBaseConfiguration;->diff(Landroid/content/res/OplusBaseConfiguration;)I
 
     move-result v3
 
@@ -295,7 +295,7 @@
 
     .line 153
     :cond_4
-    iput v5, v0, Landroid/content/res/Configuration;->densityDpi:I
+    iput v5, v0, Landroid/content/res/OplusBaseConfiguration;->densityDpi:I
 
     .line 154
     iget-object v4, p1, Landroid/content/res/ResourcesKey;->mOverlayPaths:[Ljava/lang/String;
@@ -306,13 +306,13 @@
 
     .line 155
     .local v4, "stream":Ljava/util/stream/Stream;, "Ljava/util/stream/Stream<Ljava/lang/String;>;"
-    invoke-virtual {v0}, Landroid/content/res/Configuration;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Landroid/content/res/OplusBaseConfiguration;->toString()Ljava/lang/String;
 
     move-result-object v6
 
-    sget-object v7, Landroid/content/res/Configuration;->EMPTY:Landroid/content/res/Configuration;
+    sget-object v7, Landroid/content/res/OplusBaseConfiguration;->EMPTY:Landroid/content/res/OplusBaseConfiguration;
 
-    invoke-virtual {v7}, Landroid/content/res/Configuration;->toString()Ljava/lang/String;
+    invoke-virtual {v7}, Landroid/content/res/OplusBaseConfiguration;->toString()Ljava/lang/String;
 
     move-result-object v7
 
@@ -363,23 +363,23 @@
     .line 163
     iget-object v1, p0, Landroid/app/ResourcesManagerExtImpl;->mResourcesManager:Landroid/app/ResourcesManager;
 
-    invoke-virtual {v1}, Landroid/app/ResourcesManager;->getConfiguration()Landroid/content/res/Configuration;
+    invoke-virtual {v1}, Landroid/app/ResourcesManager;->getConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Landroid/content/res/Configuration;->getLocales()Landroid/os/LocaleList;
+    invoke-virtual {v1}, Landroid/content/res/OplusBaseConfiguration;->getLocales()Landroid/os/LocaleList;
 
     move-result-object v1
 
     .line 164
     .local v1, "appLocale":Landroid/os/LocaleList;
-    invoke-virtual {p2}, Landroid/content/res/Configuration;->getLocales()Landroid/os/LocaleList;
+    invoke-virtual {p2}, Landroid/content/res/OplusBaseConfiguration;->getLocales()Landroid/os/LocaleList;
 
     move-result-object v4
 
     .line 165
     .local v4, "configLocale":Landroid/os/LocaleList;
-    invoke-virtual {v0}, Landroid/content/res/Configuration;->getLocales()Landroid/os/LocaleList;
+    invoke-virtual {v0}, Landroid/content/res/OplusBaseConfiguration;->getLocales()Landroid/os/LocaleList;
 
     move-result-object v6
 
@@ -446,10 +446,10 @@
     return v2
 .end method
 
-.method public blacklist forceUpdateAppContextResource(Landroid/app/Application;Landroid/content/res/Configuration;Landroid/content/res/CompatibilityInfo;)V
+.method public blacklist forceUpdateAppContextResource(Landroid/app/Application;Landroid/content/res/OplusBaseConfiguration;Landroid/content/res/CompatibilityInfo;)V
     .locals 9
     .param p1, "application"    # Landroid/app/Application;
-    .param p2, "newConfig"    # Landroid/content/res/Configuration;
+    .param p2, "newConfig"    # Landroid/content/res/OplusBaseConfiguration;
     .param p3, "compat"    # Landroid/content/res/CompatibilityInfo;
 
     .line 216
@@ -457,12 +457,12 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v0
 
     .line 217
-    .local v0, "oldConfig":Landroid/content/res/Configuration;
+    .local v0, "oldConfig":Landroid/content/res/OplusBaseConfiguration;
     if-eqz v0, :cond_6
 
     if-eqz p2, :cond_6
@@ -483,7 +483,7 @@
 
     .line 221
     :cond_0
-    iget-object v1, v0, Landroid/content/res/Configuration;->windowConfiguration:Landroid/app/WindowConfiguration;
+    iget-object v1, v0, Landroid/content/res/OplusBaseConfiguration;->windowConfiguration:Landroid/app/WindowConfiguration;
 
     invoke-virtual {v1}, Landroid/app/WindowConfiguration;->getWindowingMode()I
 
@@ -491,7 +491,7 @@
 
     .line 222
     .local v1, "oldWindowMode":I
-    iget-object v2, p2, Landroid/content/res/Configuration;->windowConfiguration:Landroid/app/WindowConfiguration;
+    iget-object v2, p2, Landroid/content/res/OplusBaseConfiguration;->windowConfiguration:Landroid/app/WindowConfiguration;
 
     invoke-virtual {v2}, Landroid/app/WindowConfiguration;->getWindowingMode()I
 
@@ -512,7 +512,7 @@
 
     .line 225
     :cond_2
-    invoke-virtual {v0, p2}, Landroid/content/res/Configuration;->diffPublicOnly(Landroid/content/res/Configuration;)I
+    invoke-virtual {v0, p2}, Landroid/content/res/OplusBaseConfiguration;->diffPublicOnly(Landroid/content/res/OplusBaseConfiguration;)I
 
     move-result v3
 
@@ -555,7 +555,7 @@
 
     .line 235
     :cond_4
-    invoke-virtual {v5, p2}, Landroid/view/DisplayAdjustments;->setConfiguration(Landroid/content/res/Configuration;)V
+    invoke-virtual {v5, p2}, Landroid/view/DisplayAdjustments;->setConfiguration(Landroid/content/res/OplusBaseConfiguration;)V
 
     .line 236
     invoke-static {}, Landroid/app/ResourcesManager;->getInstance()Landroid/app/ResourcesManager;
@@ -572,7 +572,7 @@
 
     .line 237
     .local v6, "dm":Landroid/util/DisplayMetrics;
-    invoke-virtual {v4, p2, v6, p3}, Landroid/content/res/ResourcesImpl;->updateConfiguration(Landroid/content/res/Configuration;Landroid/util/DisplayMetrics;Landroid/content/res/CompatibilityInfo;)V
+    invoke-virtual {v4, p2, v6, p3}, Landroid/content/res/ResourcesImpl;->updateConfiguration(Landroid/content/res/OplusBaseConfiguration;Landroid/util/DisplayMetrics;Landroid/content/res/CompatibilityInfo;)V
 
     .line 238
     new-instance v7, Ljava/lang/StringBuilder;
@@ -713,11 +713,11 @@
     .line 126
     iget-object v0, p0, Landroid/app/ResourcesManagerExtImpl;->mResourcesManager:Landroid/app/ResourcesManager;
 
-    invoke-virtual {v0}, Landroid/app/ResourcesManager;->getConfiguration()Landroid/content/res/Configuration;
+    invoke-virtual {v0}, Landroid/app/ResourcesManager;->getConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v0
 
-    invoke-static {v0}, Landroid/app/ResourcesManagerExtImpl;->inOplusCompatMode(Landroid/content/res/Configuration;)Z
+    invoke-static {v0}, Landroid/app/ResourcesManagerExtImpl;->inOplusCompatMode(Landroid/content/res/OplusBaseConfiguration;)Z
 
     move-result v0
 
@@ -782,11 +782,11 @@
     return-void
 .end method
 
-.method public blacklist setCompactWindowDisplayAdjustment(Landroid/content/res/ResourcesImpl;Landroid/content/res/Configuration;Landroid/content/res/Configuration;)V
+.method public blacklist setCompactWindowDisplayAdjustment(Landroid/content/res/ResourcesImpl;Landroid/content/res/OplusBaseConfiguration;Landroid/content/res/OplusBaseConfiguration;)V
     .locals 1
     .param p1, "impl"    # Landroid/content/res/ResourcesImpl;
-    .param p2, "oldOverrideConfig"    # Landroid/content/res/Configuration;
-    .param p3, "newOverrideConfig"    # Landroid/content/res/Configuration;
+    .param p2, "oldOverrideConfig"    # Landroid/content/res/OplusBaseConfiguration;
+    .param p3, "newOverrideConfig"    # Landroid/content/res/OplusBaseConfiguration;
 
     .line 113
     iget-object v0, p0, Landroid/app/ResourcesManagerExtImpl;->mCompactWindowAppManager:Landroid/app/IOplusCompactWindowAppManager;
@@ -794,16 +794,16 @@
     if-eqz v0, :cond_0
 
     .line 114
-    invoke-interface {v0, p1, p2, p3}, Landroid/app/IOplusCompactWindowAppManager;->setCompactWindowDisplayAdjustment(Landroid/content/res/ResourcesImpl;Landroid/content/res/Configuration;Landroid/content/res/Configuration;)V
+    invoke-interface {v0, p1, p2, p3}, Landroid/app/IOplusCompactWindowAppManager;->setCompactWindowDisplayAdjustment(Landroid/content/res/ResourcesImpl;Landroid/content/res/OplusBaseConfiguration;Landroid/content/res/OplusBaseConfiguration;)V
 
     .line 116
     :cond_0
     return-void
 .end method
 
-.method public blacklist updateAppBoundsForComapctWindowIfNeed(Landroid/content/res/Configuration;Landroid/util/DisplayMetrics;Z)V
+.method public blacklist updateAppBoundsForComapctWindowIfNeed(Landroid/content/res/OplusBaseConfiguration;Landroid/util/DisplayMetrics;Z)V
     .locals 1
-    .param p1, "config"    # Landroid/content/res/Configuration;
+    .param p1, "config"    # Landroid/content/res/OplusBaseConfiguration;
     .param p2, "displayMetrics"    # Landroid/util/DisplayMetrics;
     .param p3, "forceUpdateConfig"    # Z
 
@@ -813,16 +813,16 @@
     if-eqz v0, :cond_0
 
     .line 202
-    invoke-interface {v0, p1, p2, p3}, Landroid/app/IOplusCompactWindowAppManager;->updateAppBoundsForComapctWindowIfNeed(Landroid/content/res/Configuration;Landroid/util/DisplayMetrics;Z)V
+    invoke-interface {v0, p1, p2, p3}, Landroid/app/IOplusCompactWindowAppManager;->updateAppBoundsForComapctWindowIfNeed(Landroid/content/res/OplusBaseConfiguration;Landroid/util/DisplayMetrics;Z)V
 
     .line 204
     :cond_0
     return-void
 .end method
 
-.method public blacklist updateCompactWindowConfigToApplicationResourcesImpl(Landroid/content/res/Configuration;Landroid/content/res/ResourcesImpl;)V
+.method public blacklist updateCompactWindowConfigToApplicationResourcesImpl(Landroid/content/res/OplusBaseConfiguration;Landroid/content/res/ResourcesImpl;)V
     .locals 1
-    .param p1, "configuration"    # Landroid/content/res/Configuration;
+    .param p1, "configuration"    # Landroid/content/res/OplusBaseConfiguration;
     .param p2, "resourcesImpl"    # Landroid/content/res/ResourcesImpl;
 
     .line 106
@@ -831,17 +831,17 @@
     if-eqz v0, :cond_0
 
     .line 107
-    invoke-interface {v0, p1, p2}, Landroid/app/IOplusCompactWindowAppManager;->updateCompactWindowConfigToApplicationResourcesImpl(Landroid/content/res/Configuration;Landroid/content/res/ResourcesImpl;)V
+    invoke-interface {v0, p1, p2}, Landroid/app/IOplusCompactWindowAppManager;->updateCompactWindowConfigToApplicationResourcesImpl(Landroid/content/res/OplusBaseConfiguration;Landroid/content/res/ResourcesImpl;)V
 
     .line 109
     :cond_0
     return-void
 .end method
 
-.method public blacklist updateCustomDarkModeForWechat(Landroid/content/res/Configuration;Landroid/content/res/Configuration;Landroid/content/res/ResourcesImpl;Ljava/lang/String;)V
+.method public blacklist updateCustomDarkModeForWechat(Landroid/content/res/OplusBaseConfiguration;Landroid/content/res/OplusBaseConfiguration;Landroid/content/res/ResourcesImpl;Ljava/lang/String;)V
     .locals 1
-    .param p1, "targetConfig"    # Landroid/content/res/Configuration;
-    .param p2, "theadConfig"    # Landroid/content/res/Configuration;
+    .param p1, "targetConfig"    # Landroid/content/res/OplusBaseConfiguration;
+    .param p2, "theadConfig"    # Landroid/content/res/OplusBaseConfiguration;
     .param p3, "targetImpl"    # Landroid/content/res/ResourcesImpl;
     .param p4, "currentProcessName"    # Ljava/lang/String;
 
@@ -851,18 +851,18 @@
     if-eqz v0, :cond_0
 
     .line 121
-    invoke-interface {v0, p1, p2, p3, p4}, Landroid/app/IOplusCompactWindowAppManager;->updateCustomDarkModeForWechat(Landroid/content/res/Configuration;Landroid/content/res/Configuration;Landroid/content/res/ResourcesImpl;Ljava/lang/String;)V
+    invoke-interface {v0, p1, p2, p3, p4}, Landroid/app/IOplusCompactWindowAppManager;->updateCustomDarkModeForWechat(Landroid/content/res/OplusBaseConfiguration;Landroid/content/res/OplusBaseConfiguration;Landroid/content/res/ResourcesImpl;Ljava/lang/String;)V
 
     .line 123
     :cond_0
     return-void
 .end method
 
-.method public blacklist updateResourcesForActivity(Ljava/lang/String;Landroid/os/IBinder;Landroid/content/res/Configuration;I)V
+.method public blacklist updateResourcesForActivity(Ljava/lang/String;Landroid/os/IBinder;Landroid/content/res/OplusBaseConfiguration;I)V
     .locals 1
     .param p1, "packageName"    # Ljava/lang/String;
     .param p2, "activityToken"    # Landroid/os/IBinder;
-    .param p3, "overrideConfig"    # Landroid/content/res/Configuration;
+    .param p3, "overrideConfig"    # Landroid/content/res/OplusBaseConfiguration;
     .param p4, "displayId"    # I
 
     .line 75
@@ -875,7 +875,7 @@
     .line 77
     iget-object v0, p0, Landroid/app/ResourcesManagerExtImpl;->mResourcesManager:Landroid/app/ResourcesManager;
 
-    invoke-virtual {v0, p2, p3, p4}, Landroid/app/ResourcesManager;->updateResourcesForActivity(Landroid/os/IBinder;Landroid/content/res/Configuration;I)V
+    invoke-virtual {v0, p2, p3, p4}, Landroid/app/ResourcesManager;->updateResourcesForActivity(Landroid/os/IBinder;Landroid/content/res/OplusBaseConfiguration;I)V
 
     .line 78
     monitor-exit p0

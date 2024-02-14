@@ -42,10 +42,10 @@
     return-void
 .end method
 
-.method private blacklist flipBurmeseEncoding(Landroid/content/Context;Landroid/content/res/Configuration;)Z
+.method private blacklist flipBurmeseEncoding(Landroid/content/Context;Landroid/content/res/OplusBaseConfiguration;)Z
     .locals 3
     .param p1, "context"    # Landroid/content/Context;
-    .param p2, "config"    # Landroid/content/res/Configuration;
+    .param p2, "config"    # Landroid/content/res/OplusBaseConfiguration;
 
     .line 80
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -54,7 +54,7 @@
 
     .line 81
     .local v0, "pm":Landroid/content/pm/PackageManager;
-    invoke-direct {p0, p1, p2}, Landroid/view/OplusBurmeseZgFlagHooksImpl;->isCurrentUseZgEncoding(Landroid/content/Context;Landroid/content/res/Configuration;)Z
+    invoke-direct {p0, p1, p2}, Landroid/view/OplusBurmeseZgFlagHooksImpl;->isCurrentUseZgEncoding(Landroid/content/Context;Landroid/content/res/OplusBaseConfiguration;)Z
 
     move-result v1
 
@@ -77,10 +77,10 @@
     return v1
 .end method
 
-.method private blacklist isCurrentUseZgEncoding(Landroid/content/Context;Landroid/content/res/Configuration;)Z
+.method private blacklist isCurrentUseZgEncoding(Landroid/content/Context;Landroid/content/res/OplusBaseConfiguration;)Z
     .locals 6
     .param p1, "context"    # Landroid/content/Context;
-    .param p2, "config"    # Landroid/content/res/Configuration;
+    .param p2, "config"    # Landroid/content/res/OplusBaseConfiguration;
 
     .line 101
     const/4 v0, 0x0
@@ -90,7 +90,7 @@
     if-eqz p2, :cond_1
 
     .line 102
-    invoke-virtual {p2}, Landroid/content/res/Configuration;->getLocales()Landroid/os/LocaleList;
+    invoke-virtual {p2}, Landroid/content/res/OplusBaseConfiguration;->getLocales()Landroid/os/LocaleList;
 
     move-result-object v2
 
@@ -102,7 +102,7 @@
 
     if-nez v2, :cond_0
 
-    invoke-virtual {p2}, Landroid/content/res/Configuration;->getLocales()Landroid/os/LocaleList;
+    invoke-virtual {p2}, Landroid/content/res/OplusBaseConfiguration;->getLocales()Landroid/os/LocaleList;
 
     move-result-object v2
 
@@ -112,7 +112,7 @@
 
     if-eqz v2, :cond_0
 
-    invoke-virtual {p2}, Landroid/content/res/Configuration;->getLocales()Landroid/os/LocaleList;
+    invoke-virtual {p2}, Landroid/content/res/OplusBaseConfiguration;->getLocales()Landroid/os/LocaleList;
 
     move-result-object v2
 
@@ -135,7 +135,7 @@
 
     .line 105
     :cond_0
-    invoke-virtual {p2}, Landroid/content/res/Configuration;->getLocales()Landroid/os/LocaleList;
+    invoke-virtual {p2}, Landroid/content/res/OplusBaseConfiguration;->getLocales()Landroid/os/LocaleList;
 
     move-result-object v2
 
@@ -377,7 +377,7 @@
     .line 52
     const/4 v0, 0x0
 
-    invoke-direct {p0, p1, v0}, Landroid/view/OplusBurmeseZgFlagHooksImpl;->isCurrentUseZgEncoding(Landroid/content/Context;Landroid/content/res/Configuration;)Z
+    invoke-direct {p0, p1, v0}, Landroid/view/OplusBurmeseZgFlagHooksImpl;->isCurrentUseZgEncoding(Landroid/content/Context;Landroid/content/res/OplusBaseConfiguration;)Z
 
     move-result v0
 
@@ -398,17 +398,17 @@
     return-void
 .end method
 
-.method public whitelist updateBurmeseEncodingForUser(Landroid/content/Context;Landroid/content/res/Configuration;I)V
+.method public whitelist updateBurmeseEncodingForUser(Landroid/content/Context;Landroid/content/res/OplusBaseConfiguration;I)V
     .locals 2
     .param p1, "context"    # Landroid/content/Context;
-    .param p2, "config"    # Landroid/content/res/Configuration;
+    .param p2, "config"    # Landroid/content/res/OplusBaseConfiguration;
     .param p3, "userId"    # I
 
     .line 72
     if-eqz p1, :cond_0
 
     .line 73
-    invoke-direct {p0, p1, p2}, Landroid/view/OplusBurmeseZgFlagHooksImpl;->flipBurmeseEncoding(Landroid/content/Context;Landroid/content/res/Configuration;)Z
+    invoke-direct {p0, p1, p2}, Landroid/view/OplusBurmeseZgFlagHooksImpl;->flipBurmeseEncoding(Landroid/content/Context;Landroid/content/res/OplusBaseConfiguration;)Z
 
     goto :goto_0
 
@@ -432,7 +432,7 @@
     .line 61
     const/4 v0, 0x0
 
-    invoke-direct {p0, p1, v0}, Landroid/view/OplusBurmeseZgFlagHooksImpl;->isCurrentUseZgEncoding(Landroid/content/Context;Landroid/content/res/Configuration;)Z
+    invoke-direct {p0, p1, v0}, Landroid/view/OplusBurmeseZgFlagHooksImpl;->isCurrentUseZgEncoding(Landroid/content/Context;Landroid/content/res/OplusBaseConfiguration;)Z
 
     move-result v0
 

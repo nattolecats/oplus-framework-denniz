@@ -646,10 +646,10 @@
     return-void
 .end method
 
-.method public whitelist setDarkModeProgress(Landroid/view/View;Landroid/content/res/Configuration;)Z
+.method public whitelist setDarkModeProgress(Landroid/view/View;Landroid/content/res/OplusBaseConfiguration;)Z
     .locals 1
     .param p1, "decor"    # Landroid/view/View;
-    .param p2, "configuration"    # Landroid/content/res/Configuration;
+    .param p2, "configuration"    # Landroid/content/res/OplusBaseConfiguration;
 
     .line 131
     const/4 v0, 0x0
@@ -666,10 +666,10 @@
     return v0
 .end method
 
-.method public whitelist shouldInterceptConfigRelaunch(ILandroid/content/res/Configuration;)Z
+.method public whitelist shouldInterceptConfigRelaunch(ILandroid/content/res/OplusBaseConfiguration;)Z
     .locals 1
     .param p1, "diff"    # I
-    .param p2, "configuration"    # Landroid/content/res/Configuration;
+    .param p2, "configuration"    # Landroid/content/res/OplusBaseConfiguration;
 
     .line 127
     const/4 v0, 0x0

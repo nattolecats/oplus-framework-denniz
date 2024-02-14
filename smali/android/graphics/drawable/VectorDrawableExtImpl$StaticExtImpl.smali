@@ -529,7 +529,7 @@
     if-eqz v0, :cond_3
 
     .line 107
-    invoke-interface {v0}, Landroid/content/res/IResourcesExt;->getConfiguration()Landroid/content/res/Configuration;
+    invoke-interface {v0}, Landroid/content/res/IResourcesExt;->getConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v0
 

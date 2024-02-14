@@ -299,11 +299,11 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v0
 
-    iget v0, v0, Landroid/content/res/Configuration;->fontScale:F
+    iget v0, v0, Landroid/content/res/OplusBaseConfiguration;->fontScale:F
 
     .line 645
     .local v0, "fontScale":F
@@ -2056,12 +2056,12 @@
 
     move-result-object v2
 
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v2
 
     .line 939
-    .local v2, "config":Landroid/content/res/Configuration;
+    .local v2, "config":Landroid/content/res/OplusBaseConfiguration;
     iget-object v5, p0, Lcom/android/internal/app/OplusResolverManager;->mPreView:Landroid/view/View;
 
     if-eqz v5, :cond_5
@@ -2079,7 +2079,7 @@
 
     if-eqz v5, :cond_4
 
-    iget v5, v2, Landroid/content/res/Configuration;->orientation:I
+    iget v5, v2, Landroid/content/res/OplusBaseConfiguration;->orientation:I
 
     if-eq v5, v3, :cond_4
 
@@ -2161,9 +2161,9 @@
     return-void
 .end method
 
-.method private blacklist updateViewByConfigChanged(Landroid/content/res/Configuration;)V
+.method private blacklist updateViewByConfigChanged(Landroid/content/res/OplusBaseConfiguration;)V
     .locals 11
-    .param p1, "newConfig"    # Landroid/content/res/Configuration;
+    .param p1, "newConfig"    # Landroid/content/res/OplusBaseConfiguration;
 
     .line 333
     iget-object v0, p0, Lcom/android/internal/app/OplusResolverManager;->mResolverDialogHelper:Lcom/oplus/resolver/OplusResolverDialogHelper;
@@ -2192,7 +2192,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v0
 
@@ -2202,7 +2202,7 @@
     move-object v0, p1
 
     .line 338
-    .local v0, "config":Landroid/content/res/Configuration;
+    .local v0, "config":Landroid/content/res/OplusBaseConfiguration;
     :goto_0
     iget-object v2, p0, Lcom/android/internal/app/OplusResolverManager;->mResolverDialogHelper:Lcom/oplus/resolver/OplusResolverDialogHelper;
 
@@ -2261,7 +2261,7 @@
 
     if-eqz v5, :cond_3
 
-    iget v5, v0, Landroid/content/res/Configuration;->orientation:I
+    iget v5, v0, Landroid/content/res/OplusBaseConfiguration;->orientation:I
 
     if-ne v5, v6, :cond_2
 
@@ -2291,7 +2291,7 @@
 
     if-nez v5, :cond_5
 
-    iget v5, v0, Landroid/content/res/Configuration;->orientation:I
+    iget v5, v0, Landroid/content/res/OplusBaseConfiguration;->orientation:I
 
     if-ne v5, v6, :cond_5
 
@@ -2407,7 +2407,7 @@
     invoke-static {v1, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 364
-    iget v6, v0, Landroid/content/res/Configuration;->screenWidthDp:I
+    iget v6, v0, Landroid/content/res/OplusBaseConfiguration;->screenWidthDp:I
 
     const/16 v9, 0x280
 
@@ -2463,13 +2463,13 @@
 
     move-result v7
 
-    invoke-virtual {v1, v6, v0, v7, v4}, Lcom/oplus/resolver/widget/OplusResolverDrawerLayout;->setConfiguration(ZLandroid/content/res/Configuration;ZZ)V
+    invoke-virtual {v1, v6, v0, v7, v4}, Lcom/oplus/resolver/widget/OplusResolverDrawerLayout;->setConfiguration(ZLandroid/content/res/OplusBaseConfiguration;ZZ)V
 
     .line 370
     return-void
 
     .line 334
-    .end local v0    # "config":Landroid/content/res/Configuration;
+    .end local v0    # "config":Landroid/content/res/OplusBaseConfiguration;
     .end local v2    # "display":Landroid/view/Display;
     .end local v3    # "orientation":I
     .end local v4    # "show":Z
@@ -3783,9 +3783,9 @@
     return-void
 .end method
 
-.method public whitelist onConfigurationChanged(Landroid/content/res/Configuration;)V
+.method public whitelist onConfigurationChanged(Landroid/content/res/OplusBaseConfiguration;)V
     .locals 2
-    .param p1, "newConfig"    # Landroid/content/res/Configuration;
+    .param p1, "newConfig"    # Landroid/content/res/OplusBaseConfiguration;
 
     .line 313
     iget-object v0, p0, Lcom/android/internal/app/OplusResolverManager;->mResolverActivity:Lcom/android/internal/app/ResolverActivity;
@@ -3813,7 +3813,7 @@
     invoke-virtual {v0}, Lcom/android/internal/app/ResolverListAdapter;->handlePackagesChanged()V
 
     .line 318
-    invoke-direct {p0, p1}, Lcom/android/internal/app/OplusResolverManager;->updateViewByConfigChanged(Landroid/content/res/Configuration;)V
+    invoke-direct {p0, p1}, Lcom/android/internal/app/OplusResolverManager;->updateViewByConfigChanged(Landroid/content/res/OplusBaseConfiguration;)V
 
     .line 320
     :cond_0
@@ -4637,7 +4637,7 @@
     .line 278
     const/4 v3, 0x0
 
-    invoke-direct {p0, v3}, Lcom/android/internal/app/OplusResolverManager;->updateViewByConfigChanged(Landroid/content/res/Configuration;)V
+    invoke-direct {p0, v3}, Lcom/android/internal/app/OplusResolverManager;->updateViewByConfigChanged(Landroid/content/res/OplusBaseConfiguration;)V
 
     .line 279
     return-void

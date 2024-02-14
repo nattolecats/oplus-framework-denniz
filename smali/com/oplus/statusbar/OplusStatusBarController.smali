@@ -210,12 +210,12 @@
 
     move-result-object v1
 
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v1
 
     .line 158
-    .local v1, "configuration":Landroid/content/res/Configuration;
+    .local v1, "configuration":Landroid/content/res/OplusBaseConfiguration;
     const-class v2, Landroid/content/res/OplusBaseConfiguration;
 
     .line 159

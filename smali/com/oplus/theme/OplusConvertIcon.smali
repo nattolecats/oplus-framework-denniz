@@ -2680,7 +2680,7 @@
 
     iget-object v5, p0, Landroid/content/res/Resources;->mResourcesExt:Landroid/content/res/IResourcesExt;
 
-    invoke-interface {v5}, Landroid/content/res/IResourcesExt;->getConfiguration()Landroid/content/res/Configuration;
+    invoke-interface {v5}, Landroid/content/res/IResourcesExt;->getConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v5
 
@@ -3865,11 +3865,11 @@
     .param p0, "res"    # Landroid/content/res/Resources;
 
     .line 770
-    invoke-virtual {p0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+    invoke-virtual {p0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v0
 
-    iget v0, v0, Landroid/content/res/Configuration;->uiMode:I
+    iget v0, v0, Landroid/content/res/OplusBaseConfiguration;->uiMode:I
 
     and-int/lit8 v0, v0, 0x30
 
@@ -3894,12 +3894,12 @@
     if-eqz v0, :cond_1
 
     .line 773
-    invoke-virtual {p0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+    invoke-virtual {p0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v3
 
     .line 774
-    .local v3, "config":Landroid/content/res/Configuration;
+    .local v3, "config":Landroid/content/res/OplusBaseConfiguration;
     const-class v4, Landroid/content/res/OplusBaseConfiguration;
 
     invoke-static {v4, v3}, Lcom/oplus/util/OplusTypeCastingHelper;->typeCasting(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/Object;
@@ -3958,7 +3958,7 @@
     return v2
 
     .line 786
-    .end local v3    # "config":Landroid/content/res/Configuration;
+    .end local v3    # "config":Landroid/content/res/OplusBaseConfiguration;
     .end local v4    # "baseConfig":Landroid/content/res/OplusBaseConfiguration;
     .end local v5    # "extraConfig":Loplus/content/res/OplusExtraConfiguration;
     .end local v6    # "uxiconConfig":Ljava/lang/Long;

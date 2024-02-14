@@ -209,7 +209,7 @@
     .line 433
     iget-object v0, p0, Landroid/content/res/OplusThemeZipFile;->mBaseResources:Landroid/content/res/IResourcesImplExt;
 
-    invoke-interface {v0}, Landroid/content/res/IResourcesImplExt;->getSystemConfiguration()Landroid/content/res/Configuration;
+    invoke-interface {v0}, Landroid/content/res/IResourcesImplExt;->getSystemConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v0
 
@@ -759,7 +759,7 @@
 
     .line 328
     :cond_1
-    invoke-interface {p2}, Landroid/content/res/IResourcesImplExt;->getSystemConfiguration()Landroid/content/res/Configuration;
+    invoke-interface {p2}, Landroid/content/res/IResourcesImplExt;->getSystemConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v3
 
@@ -779,7 +779,7 @@
     .line 326
     :cond_3
     :goto_0
-    invoke-interface {p2}, Landroid/content/res/IResourcesImplExt;->getConfiguration()Landroid/content/res/Configuration;
+    invoke-interface {p2}, Landroid/content/res/IResourcesImplExt;->getConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v3
 
@@ -1074,7 +1074,7 @@
 
     .line 448
     :cond_0
-    invoke-interface/range {p2 .. p2}, Landroid/content/res/IResourcesImplExt;->getSystemConfiguration()Landroid/content/res/Configuration;
+    invoke-interface/range {p2 .. p2}, Landroid/content/res/IResourcesImplExt;->getSystemConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v0
 

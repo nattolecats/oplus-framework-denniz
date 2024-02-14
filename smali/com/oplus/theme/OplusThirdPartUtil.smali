@@ -1339,11 +1339,11 @@
     .local v1, "extraConfig":Loplus/content/res/OplusExtraConfiguration;
     if-eqz p0, :cond_2
 
-    invoke-virtual {p0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+    invoke-virtual {p0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Landroid/content/res/Configuration;->getOplusExtraConfiguration()Loplus/content/res/OplusExtraConfiguration;
+    invoke-virtual {v2}, Landroid/content/res/OplusBaseConfiguration;->getOplusExtraConfiguration()Loplus/content/res/OplusExtraConfiguration;
 
     move-result-object v2
 

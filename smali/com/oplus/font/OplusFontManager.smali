@@ -355,9 +355,9 @@
     return-void
 .end method
 
-.method public blacklist setFlipFont(Landroid/content/res/Configuration;I)V
+.method public blacklist setFlipFont(Landroid/content/res/OplusBaseConfiguration;I)V
     .locals 1
-    .param p1, "config"    # Landroid/content/res/Configuration;
+    .param p1, "config"    # Landroid/content/res/OplusBaseConfiguration;
     .param p2, "changes"    # I
 
     .line 119
@@ -368,20 +368,20 @@
     if-eqz v0, :cond_0
 
     .line 120
-    invoke-static {p1}, Lcom/oplus/util/OplusFontUtils;->setFlipFont(Landroid/content/res/Configuration;)V
+    invoke-static {p1}, Lcom/oplus/util/OplusFontUtils;->setFlipFont(Landroid/content/res/OplusBaseConfiguration;)V
 
     .line 122
     :cond_0
     return-void
 .end method
 
-.method public whitelist setFlipFontWhenUserChange(Landroid/content/res/Configuration;I)V
+.method public whitelist setFlipFontWhenUserChange(Landroid/content/res/OplusBaseConfiguration;I)V
     .locals 0
-    .param p1, "config"    # Landroid/content/res/Configuration;
+    .param p1, "config"    # Landroid/content/res/OplusBaseConfiguration;
     .param p2, "changes"    # I
 
     .line 126
-    invoke-static {p1}, Lcom/oplus/util/OplusFontUtils;->setFlipFontWhenUserChange(Landroid/content/res/Configuration;)V
+    invoke-static {p1}, Lcom/oplus/util/OplusFontUtils;->setFlipFontWhenUserChange(Landroid/content/res/OplusBaseConfiguration;)V
 
     .line 127
     return-void
@@ -398,50 +398,50 @@
     return-void
 .end method
 
-.method public whitelist updateConfigurationInUIMode(Landroid/content/Context;Landroid/content/res/Configuration;I)V
+.method public whitelist updateConfigurationInUIMode(Landroid/content/Context;Landroid/content/res/OplusBaseConfiguration;I)V
     .locals 0
     .param p1, "context"    # Landroid/content/Context;
-    .param p2, "config"    # Landroid/content/res/Configuration;
+    .param p2, "config"    # Landroid/content/res/OplusBaseConfiguration;
     .param p3, "userId"    # I
 
     .line 173
-    invoke-static {p1, p2, p3}, Lcom/oplus/util/OplusFontUtils;->updateConfigurationInUIMode(Landroid/content/Context;Landroid/content/res/Configuration;I)V
+    invoke-static {p1, p2, p3}, Lcom/oplus/util/OplusFontUtils;->updateConfigurationInUIMode(Landroid/content/Context;Landroid/content/res/OplusBaseConfiguration;I)V
 
     .line 174
     return-void
 .end method
 
-.method public whitelist updateLanguageLocale(Landroid/content/res/Configuration;)V
+.method public whitelist updateLanguageLocale(Landroid/content/res/OplusBaseConfiguration;)V
     .locals 0
-    .param p1, "config"    # Landroid/content/res/Configuration;
+    .param p1, "config"    # Landroid/content/res/OplusBaseConfiguration;
 
     .line 168
-    invoke-static {p1}, Lcom/oplus/util/OplusFontUtils;->updateLanguageLocale(Landroid/content/res/Configuration;)V
+    invoke-static {p1}, Lcom/oplus/util/OplusFontUtils;->updateLanguageLocale(Landroid/content/res/OplusBaseConfiguration;)V
 
     .line 169
     return-void
 .end method
 
-.method public whitelist updateOpSansConfig(Landroid/content/Context;Landroid/content/res/Configuration;I)V
+.method public whitelist updateOpSansConfig(Landroid/content/Context;Landroid/content/res/OplusBaseConfiguration;I)V
     .locals 0
     .param p1, "context"    # Landroid/content/Context;
-    .param p2, "config"    # Landroid/content/res/Configuration;
+    .param p2, "config"    # Landroid/content/res/OplusBaseConfiguration;
     .param p3, "userId"    # I
 
     .line 195
-    invoke-static {p1, p2, p3}, Lcom/oplus/util/OplusFontUtils;->updateOpSansConfig(Landroid/content/Context;Landroid/content/res/Configuration;I)V
+    invoke-static {p1, p2, p3}, Lcom/oplus/util/OplusFontUtils;->updateOpSansConfig(Landroid/content/Context;Landroid/content/res/OplusBaseConfiguration;I)V
 
     .line 196
     return-void
 .end method
 
-.method public whitelist updateTypefaceInCurrProcess(Landroid/content/res/Configuration;I)V
+.method public whitelist updateTypefaceInCurrProcess(Landroid/content/res/OplusBaseConfiguration;I)V
     .locals 0
-    .param p1, "config"    # Landroid/content/res/Configuration;
+    .param p1, "config"    # Landroid/content/res/OplusBaseConfiguration;
     .param p2, "changes"    # I
 
     .line 136
-    invoke-static {p1, p2}, Lcom/oplus/util/OplusFontUtils;->updateTypefaceInCurrProcess(Landroid/content/res/Configuration;I)V
+    invoke-static {p1, p2}, Lcom/oplus/util/OplusFontUtils;->updateTypefaceInCurrProcess(Landroid/content/res/OplusBaseConfiguration;I)V
 
     .line 137
     return-void

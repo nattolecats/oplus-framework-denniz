@@ -1191,11 +1191,11 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v0
 
-    invoke-static {v0}, Landroid/app/ResourcesManagerExtImpl;->inOplusCompatMode(Landroid/content/res/Configuration;)Z
+    invoke-static {v0}, Landroid/app/ResourcesManagerExtImpl;->inOplusCompatMode(Landroid/content/res/OplusBaseConfiguration;)Z
 
     move-result v0
 
@@ -1212,11 +1212,11 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v0
 
-    iget-object v0, v0, Landroid/content/res/Configuration;->windowConfiguration:Landroid/app/WindowConfiguration;
+    iget-object v0, v0, Landroid/content/res/OplusBaseConfiguration;->windowConfiguration:Landroid/app/WindowConfiguration;
 
     invoke-virtual {v0}, Landroid/app/WindowConfiguration;->getWindowingMode()I
 
@@ -1909,11 +1909,11 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v0
 
-    iget v0, v0, Landroid/content/res/Configuration;->orientation:I
+    iget v0, v0, Landroid/content/res/OplusBaseConfiguration;->orientation:I
 
     const/4 v1, 0x1
 
@@ -2160,11 +2160,11 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v0
 
-    iget v0, v0, Landroid/content/res/Configuration;->orientation:I
+    iget v0, v0, Landroid/content/res/OplusBaseConfiguration;->orientation:I
 
     const/4 v1, 0x1
 

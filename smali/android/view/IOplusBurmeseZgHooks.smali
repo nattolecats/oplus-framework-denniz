@@ -72,10 +72,10 @@
     return-void
 .end method
 
-.method public whitelist updateBurmeseEncodingForUser(Landroid/content/Context;Landroid/content/res/Configuration;I)V
+.method public whitelist updateBurmeseEncodingForUser(Landroid/content/Context;Landroid/content/res/OplusBaseConfiguration;I)V
     .locals 0
     .param p1, "context"    # Landroid/content/Context;
-    .param p2, "config"    # Landroid/content/res/Configuration;
+    .param p2, "config"    # Landroid/content/res/OplusBaseConfiguration;
     .param p3, "userId"    # I
 
     .line 48

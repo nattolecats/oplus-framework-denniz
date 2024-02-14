@@ -261,13 +261,13 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v0
 
     .line 129
-    .local v0, "configuration":Landroid/content/res/Configuration;
-    invoke-direct {p0, v0, p1}, Lcom/android/internal/policy/OplusZoomWindowDecorViewHelper;->setRectRadius(Landroid/content/res/Configuration;Landroid/content/Context;)V
+    .local v0, "configuration":Landroid/content/res/OplusBaseConfiguration;
+    invoke-direct {p0, v0, p1}, Lcom/android/internal/policy/OplusZoomWindowDecorViewHelper;->setRectRadius(Landroid/content/res/OplusBaseConfiguration;Landroid/content/Context;)V
 
     .line 130
     iput-object p1, p0, Lcom/android/internal/policy/OplusZoomWindowDecorViewHelper;->mContext:Landroid/content/Context;
@@ -536,9 +536,9 @@
     .end packed-switch
 .end method
 
-.method private blacklist setRectRadius(Landroid/content/res/Configuration;Landroid/content/Context;)V
+.method private blacklist setRectRadius(Landroid/content/res/OplusBaseConfiguration;Landroid/content/Context;)V
     .locals 1
-    .param p1, "configuration"    # Landroid/content/res/Configuration;
+    .param p1, "configuration"    # Landroid/content/res/OplusBaseConfiguration;
     .param p2, "context"    # Landroid/content/Context;
 
     .line 341
@@ -570,10 +570,10 @@
 
 
 # virtual methods
-.method protected blacklist createZoomWindowDecorView(Landroid/view/LayoutInflater;Landroid/content/res/Configuration;Landroid/content/Context;)Lcom/android/internal/widget/ZoomWindowDecorView;
+.method protected blacklist createZoomWindowDecorView(Landroid/view/LayoutInflater;Landroid/content/res/OplusBaseConfiguration;Landroid/content/Context;)Lcom/android/internal/widget/ZoomWindowDecorView;
     .locals 8
     .param p1, "inflater"    # Landroid/view/LayoutInflater;
-    .param p2, "newConfig"    # Landroid/content/res/Configuration;
+    .param p2, "newConfig"    # Landroid/content/res/OplusBaseConfiguration;
     .param p3, "context"    # Landroid/content/Context;
 
     .line 142
@@ -619,7 +619,7 @@
 
     .line 153
     .local v0, "zoomWindowDecorView":Lcom/android/internal/widget/ZoomWindowDecorView;
-    iget-object v1, p2, Landroid/content/res/Configuration;->windowConfiguration:Landroid/app/WindowConfiguration;
+    iget-object v1, p2, Landroid/content/res/OplusBaseConfiguration;->windowConfiguration:Landroid/app/WindowConfiguration;
 
     .line 154
     .local v1, "winConfig":Landroid/app/WindowConfiguration;
@@ -748,11 +748,11 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v0
 
-    iget-object v0, v0, Landroid/content/res/Configuration;->windowConfiguration:Landroid/app/WindowConfiguration;
+    iget-object v0, v0, Landroid/content/res/OplusBaseConfiguration;->windowConfiguration:Landroid/app/WindowConfiguration;
 
     invoke-virtual {v0}, Landroid/app/WindowConfiguration;->getWindowingMode()I
 
@@ -777,11 +777,11 @@
     .param p3, "configuration"    # Landroid/util/MergedConfiguration;
 
     .line 292
-    invoke-virtual {p3}, Landroid/util/MergedConfiguration;->getMergedConfiguration()Landroid/content/res/Configuration;
+    invoke-virtual {p3}, Landroid/util/MergedConfiguration;->getMergedConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v0
 
-    iget-object v0, v0, Landroid/content/res/Configuration;->windowConfiguration:Landroid/app/WindowConfiguration;
+    iget-object v0, v0, Landroid/content/res/OplusBaseConfiguration;->windowConfiguration:Landroid/app/WindowConfiguration;
 
     invoke-virtual {v0}, Landroid/app/WindowConfiguration;->getWindowingMode()I
 
@@ -1397,15 +1397,15 @@
     .end packed-switch
 .end method
 
-.method public blacklist setLastReportedMergedConfiguration(Landroid/content/res/Configuration;Landroid/content/Context;Lcom/android/internal/policy/PhoneWindow;Lcom/android/internal/policy/DecorView;)V
+.method public blacklist setLastReportedMergedConfiguration(Landroid/content/res/OplusBaseConfiguration;Landroid/content/Context;Lcom/android/internal/policy/PhoneWindow;Lcom/android/internal/policy/DecorView;)V
     .locals 4
-    .param p1, "newConfig"    # Landroid/content/res/Configuration;
+    .param p1, "newConfig"    # Landroid/content/res/OplusBaseConfiguration;
     .param p2, "context"    # Landroid/content/Context;
     .param p3, "window"    # Lcom/android/internal/policy/PhoneWindow;
     .param p4, "decorView"    # Lcom/android/internal/policy/DecorView;
 
     .line 194
-    iget-object v0, p1, Landroid/content/res/Configuration;->windowConfiguration:Landroid/app/WindowConfiguration;
+    iget-object v0, p1, Landroid/content/res/OplusBaseConfiguration;->windowConfiguration:Landroid/app/WindowConfiguration;
 
     invoke-virtual {v0}, Landroid/app/WindowConfiguration;->getWindowingMode()I
 
@@ -1436,7 +1436,7 @@
     if-eqz v2, :cond_1
 
     .line 196
-    iget-object v2, p1, Landroid/content/res/Configuration;->windowConfiguration:Landroid/app/WindowConfiguration;
+    iget-object v2, p1, Landroid/content/res/OplusBaseConfiguration;->windowConfiguration:Landroid/app/WindowConfiguration;
 
     invoke-virtual {v2}, Landroid/app/WindowConfiguration;->getBounds()Landroid/graphics/Rect;
 
@@ -1513,7 +1513,7 @@
     iput-object p3, p0, Lcom/android/internal/policy/OplusZoomWindowDecorViewHelper;->mWindow:Lcom/android/internal/policy/PhoneWindow;
 
     .line 202
-    invoke-virtual {p0, v2, p1, p2}, Lcom/android/internal/policy/OplusZoomWindowDecorViewHelper;->createZoomWindowDecorView(Landroid/view/LayoutInflater;Landroid/content/res/Configuration;Landroid/content/Context;)Lcom/android/internal/widget/ZoomWindowDecorView;
+    invoke-virtual {p0, v2, p1, p2}, Lcom/android/internal/policy/OplusZoomWindowDecorViewHelper;->createZoomWindowDecorView(Landroid/view/LayoutInflater;Landroid/content/res/OplusBaseConfiguration;Landroid/content/Context;)Lcom/android/internal/widget/ZoomWindowDecorView;
 
     move-result-object v3
 
@@ -1637,9 +1637,9 @@
     return-void
 .end method
 
-.method protected blacklist updateZoomWindowDecorStatus(Landroid/content/res/Configuration;)V
+.method protected blacklist updateZoomWindowDecorStatus(Landroid/content/res/OplusBaseConfiguration;)V
     .locals 2
-    .param p1, "config"    # Landroid/content/res/Configuration;
+    .param p1, "config"    # Landroid/content/res/OplusBaseConfiguration;
 
     .line 235
     new-instance v0, Ljava/lang/StringBuilder;

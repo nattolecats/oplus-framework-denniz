@@ -25,10 +25,10 @@
     return-void
 .end method
 
-.method public static blacklist calculateResponsiveUIWidth(Landroid/content/Context;Landroid/content/res/Configuration;)I
+.method public static blacklist calculateResponsiveUIWidth(Landroid/content/Context;Landroid/content/res/OplusBaseConfiguration;)I
     .locals 13
     .param p0, "context"    # Landroid/content/Context;
-    .param p1, "cfg"    # Landroid/content/res/Configuration;
+    .param p1, "cfg"    # Landroid/content/res/OplusBaseConfiguration;
 
     .line 25
     invoke-virtual {p0}, Landroid/content/Context;->getDisplay()Landroid/view/Display;
@@ -133,7 +133,7 @@
     invoke-virtual {v8, v7}, Landroid/view/Display;->getRealMetrics(Landroid/util/DisplayMetrics;)V
 
     .line 36
-    iget v8, p1, Landroid/content/res/Configuration;->screenWidthDp:I
+    iget v8, p1, Landroid/content/res/OplusBaseConfiguration;->screenWidthDp:I
 
     int-to-float v8, v8
 
@@ -175,7 +175,7 @@
 
     move-result-object v11
 
-    iget v12, p1, Landroid/content/res/Configuration;->screenWidthDp:I
+    iget v12, p1, Landroid/content/res/OplusBaseConfiguration;->screenWidthDp:I
 
     invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 

@@ -128,11 +128,11 @@
     .param p1, "res"    # Landroid/content/res/Resources;
 
     .line 48
-    invoke-virtual {p1}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+    invoke-virtual {p1}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v0
 
-    iget v0, v0, Landroid/content/res/Configuration;->smallestScreenWidthDp:I
+    iget v0, v0, Landroid/content/res/OplusBaseConfiguration;->smallestScreenWidthDp:I
 
     const/16 v1, 0x24e
 

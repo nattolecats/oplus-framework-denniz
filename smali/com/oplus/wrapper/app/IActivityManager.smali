@@ -12,7 +12,7 @@
 
 
 # virtual methods
-.method public abstract whitelist getConfiguration()Landroid/content/res/Configuration;
+.method public abstract whitelist getConfiguration()Landroid/content/res/OplusBaseConfiguration;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;

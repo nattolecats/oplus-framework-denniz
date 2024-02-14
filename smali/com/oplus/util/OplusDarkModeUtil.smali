@@ -37,13 +37,13 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v0
 
     .line 20
-    .local v0, "configuration":Landroid/content/res/Configuration;
-    iget v1, v0, Landroid/content/res/Configuration;->uiMode:I
+    .local v0, "configuration":Landroid/content/res/OplusBaseConfiguration;
+    iget v1, v0, Landroid/content/res/OplusBaseConfiguration;->uiMode:I
 
     and-int/lit8 v1, v1, 0x30
 

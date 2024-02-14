@@ -684,10 +684,10 @@
     return v0
 .end method
 
-.method public blacklist hookConfigurationChangedActivity(Landroid/content/pm/ActivityInfo;Landroid/content/res/Configuration;)V
+.method public blacklist hookConfigurationChangedActivity(Landroid/content/pm/ActivityInfo;Landroid/content/res/OplusBaseConfiguration;)V
     .locals 0
     .param p1, "activityInfo"    # Landroid/content/pm/ActivityInfo;
-    .param p2, "configuration"    # Landroid/content/res/Configuration;
+    .param p2, "configuration"    # Landroid/content/res/OplusBaseConfiguration;
 
     .line 524
     return-void
@@ -711,11 +711,11 @@
     return-void
 .end method
 
-.method public blacklist hookPerformLaunchActivity(Ljava/lang/String;Landroid/content/pm/ActivityInfo;Landroid/content/res/Configuration;)V
+.method public blacklist hookPerformLaunchActivity(Ljava/lang/String;Landroid/content/pm/ActivityInfo;Landroid/content/res/OplusBaseConfiguration;)V
     .locals 1
     .param p1, "packageName"    # Ljava/lang/String;
     .param p2, "activityInfo"    # Landroid/content/pm/ActivityInfo;
-    .param p3, "configuration"    # Landroid/content/res/Configuration;
+    .param p3, "configuration"    # Landroid/content/res/OplusBaseConfiguration;
 
     .line 507
     invoke-direct {p0}, Landroid/app/OplusActivityThreadExtImpl;->getAutoLayoutManager()Landroid/view/autolayout/IOplusAutoLayoutManager;
@@ -735,10 +735,10 @@
     return-void
 .end method
 
-.method public blacklist hookPerformResumeActivity(Landroid/content/pm/ActivityInfo;Landroid/content/res/Configuration;)V
+.method public blacklist hookPerformResumeActivity(Landroid/content/pm/ActivityInfo;Landroid/content/res/OplusBaseConfiguration;)V
     .locals 1
     .param p1, "activityInfo"    # Landroid/content/pm/ActivityInfo;
-    .param p2, "configuration"    # Landroid/content/res/Configuration;
+    .param p2, "configuration"    # Landroid/content/res/OplusBaseConfiguration;
 
     .line 518
     invoke-direct {p0}, Landroid/app/OplusActivityThreadExtImpl;->getRGBNormalizeManager()Landroid/view/rgbnormalize/IOplusRGBNormalizeManager;
@@ -1353,12 +1353,12 @@
     return v0
 .end method
 
-.method public blacklist shouldInterceptConfigForSplit(Landroid/os/IBinder;Landroid/content/res/Configuration;Landroid/content/res/Configuration;Landroid/content/res/Configuration;ZLjava/lang/Boolean;)Z
+.method public blacklist shouldInterceptConfigForSplit(Landroid/os/IBinder;Landroid/content/res/OplusBaseConfiguration;Landroid/content/res/OplusBaseConfiguration;Landroid/content/res/OplusBaseConfiguration;ZLjava/lang/Boolean;)Z
     .locals 6
     .param p1, "token"    # Landroid/os/IBinder;
-    .param p2, "config"    # Landroid/content/res/Configuration;
-    .param p3, "newConfig"    # Landroid/content/res/Configuration;
-    .param p4, "overrideConfig"    # Landroid/content/res/Configuration;
+    .param p2, "config"    # Landroid/content/res/OplusBaseConfiguration;
+    .param p3, "newConfig"    # Landroid/content/res/OplusBaseConfiguration;
+    .param p4, "overrideConfig"    # Landroid/content/res/OplusBaseConfiguration;
     .param p5, "displayChanged"    # Z
     .param p6, "configChanged"    # Ljava/lang/Boolean;
 
@@ -1400,7 +1400,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v1, p1, p4}, Landroid/app/ResourcesManager;->isSameResourcesOverrideConfig(Landroid/os/IBinder;Landroid/content/res/Configuration;)Z
+    invoke-virtual {v1, p1, p4}, Landroid/app/ResourcesManager;->isSameResourcesOverrideConfig(Landroid/os/IBinder;Landroid/content/res/OplusBaseConfiguration;)Z
 
     move-result v1
 
@@ -1415,7 +1415,7 @@
 
     .line 473
     .local v1, "rotationChanged":Z
-    iget-object v2, p2, Landroid/content/res/Configuration;->windowConfiguration:Landroid/app/WindowConfiguration;
+    iget-object v2, p2, Landroid/content/res/OplusBaseConfiguration;->windowConfiguration:Landroid/app/WindowConfiguration;
 
     invoke-virtual {v2}, Landroid/app/WindowConfiguration;->getDisplayRotation()I
 
@@ -1423,7 +1423,7 @@
 
     .line 474
     .local v2, "origRot":I
-    iget-object v3, p3, Landroid/content/res/Configuration;->windowConfiguration:Landroid/app/WindowConfiguration;
+    iget-object v3, p3, Landroid/content/res/OplusBaseConfiguration;->windowConfiguration:Landroid/app/WindowConfiguration;
 
     invoke-virtual {v3}, Landroid/app/WindowConfiguration;->getDisplayRotation()I
 
@@ -1474,10 +1474,10 @@
     return v0
 .end method
 
-.method public blacklist shouldInterceptConfigRelaunch(ILandroid/content/res/Configuration;)V
+.method public blacklist shouldInterceptConfigRelaunch(ILandroid/content/res/OplusBaseConfiguration;)V
     .locals 2
     .param p1, "diff"    # I
-    .param p2, "configuration"    # Landroid/content/res/Configuration;
+    .param p2, "configuration"    # Landroid/content/res/OplusBaseConfiguration;
 
     .line 164
     sget-object v0, Lcom/oplus/darkmode/IOplusDarkModeManager;->DEFAULT:Lcom/oplus/darkmode/IOplusDarkModeManager;
@@ -1492,7 +1492,7 @@
 
     check-cast v0, Lcom/oplus/darkmode/IOplusDarkModeManager;
 
-    invoke-interface {v0, p1, p2}, Lcom/oplus/darkmode/IOplusDarkModeManager;->shouldInterceptConfigRelaunch(ILandroid/content/res/Configuration;)Z
+    invoke-interface {v0, p1, p2}, Lcom/oplus/darkmode/IOplusDarkModeManager;->shouldInterceptConfigRelaunch(ILandroid/content/res/OplusBaseConfiguration;)Z
 
     move-result v0
 
@@ -1508,12 +1508,12 @@
     return-void
 .end method
 
-.method public blacklist shouldReportExtraConfig(Landroid/content/pm/ActivityInfo;Landroid/content/pm/IPackageManager;Landroid/content/res/Configuration;Landroid/content/res/Configuration;Z)Z
+.method public blacklist shouldReportExtraConfig(Landroid/content/pm/ActivityInfo;Landroid/content/pm/IPackageManager;Landroid/content/res/OplusBaseConfiguration;Landroid/content/res/OplusBaseConfiguration;Z)Z
     .locals 5
     .param p1, "activityInfo"    # Landroid/content/pm/ActivityInfo;
     .param p2, "pm"    # Landroid/content/pm/IPackageManager;
-    .param p3, "currentConfig"    # Landroid/content/res/Configuration;
-    .param p4, "newConfig"    # Landroid/content/res/Configuration;
+    .param p3, "currentConfig"    # Landroid/content/res/OplusBaseConfiguration;
+    .param p4, "newConfig"    # Landroid/content/res/OplusBaseConfiguration;
     .param p5, "shouldReportChange"    # Z
 
     .line 172
@@ -1523,7 +1523,7 @@
 
     .line 173
     .local v0, "realChanges":I
-    invoke-virtual {p3, p4}, Landroid/content/res/Configuration;->diffPublicOnly(Landroid/content/res/Configuration;)I
+    invoke-virtual {p3, p4}, Landroid/content/res/OplusBaseConfiguration;->diffPublicOnly(Landroid/content/res/OplusBaseConfiguration;)I
 
     move-result v1
 
@@ -1532,7 +1532,7 @@
     if-eqz p5, :cond_0
 
     .line 175
-    invoke-virtual {p0, v1, p3}, Landroid/app/OplusActivityThreadExtImpl;->shouldInterceptConfigRelaunch(ILandroid/content/res/Configuration;)V
+    invoke-virtual {p0, v1, p3}, Landroid/app/OplusActivityThreadExtImpl;->shouldInterceptConfigRelaunch(ILandroid/content/res/OplusBaseConfiguration;)V
 
     .line 177
     :cond_0
@@ -1567,7 +1567,7 @@
 
     check-cast v3, Landroid/content/res/IOplusThemeManager;
 
-    invoke-interface {v3, p1, p2, p4, v1}, Landroid/content/res/IOplusThemeManager;->interceptOplusConfigChange(Landroid/content/pm/ActivityInfo;Landroid/content/pm/IPackageManager;Landroid/content/res/Configuration;I)Z
+    invoke-interface {v3, p1, p2, p4, v1}, Landroid/content/res/IOplusThemeManager;->interceptOplusConfigChange(Landroid/content/pm/ActivityInfo;Landroid/content/pm/IPackageManager;Landroid/content/res/OplusBaseConfiguration;I)Z
 
     move-result v3
 
@@ -1584,10 +1584,10 @@
     return v2
 .end method
 
-.method public blacklist shouldSendConfigration(Landroid/content/res/Configuration;Landroid/content/res/Configuration;Landroid/os/IBinder;)Z
+.method public blacklist shouldSendConfigration(Landroid/content/res/OplusBaseConfiguration;Landroid/content/res/OplusBaseConfiguration;Landroid/os/IBinder;)Z
     .locals 1
-    .param p1, "currentConfig"    # Landroid/content/res/Configuration;
-    .param p2, "newConfig"    # Landroid/content/res/Configuration;
+    .param p1, "currentConfig"    # Landroid/content/res/OplusBaseConfiguration;
+    .param p2, "newConfig"    # Landroid/content/res/OplusBaseConfiguration;
     .param p3, "token"    # Landroid/os/IBinder;
 
     .line 500
@@ -1595,7 +1595,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, p1, p2, p3}, Lcom/oplus/compactwindow/OplusCompactWindowManager;->shouldSendConfigration(Landroid/content/res/Configuration;Landroid/content/res/Configuration;Landroid/os/IBinder;)Z
+    invoke-virtual {v0, p1, p2, p3}, Lcom/oplus/compactwindow/OplusCompactWindowManager;->shouldSendConfigration(Landroid/content/res/OplusBaseConfiguration;Landroid/content/res/OplusBaseConfiguration;Landroid/os/IBinder;)Z
 
     move-result v0
 

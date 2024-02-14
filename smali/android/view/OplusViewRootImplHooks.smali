@@ -203,11 +203,11 @@
     return-void
 .end method
 
-.method public blacklist updatePointerEvent(Landroid/view/MotionEvent;Landroid/view/View;Landroid/content/res/Configuration;)Landroid/view/MotionEvent;
+.method public blacklist updatePointerEvent(Landroid/view/MotionEvent;Landroid/view/View;Landroid/content/res/OplusBaseConfiguration;)Landroid/view/MotionEvent;
     .locals 2
     .param p1, "event"    # Landroid/view/MotionEvent;
     .param p2, "mView"    # Landroid/view/View;
-    .param p3, "mLastConfiguration"    # Landroid/content/res/Configuration;
+    .param p3, "mLastConfiguration"    # Landroid/content/res/OplusBaseConfiguration;
 
     .line 98
     sget-object v0, Landroid/view/IOplusAccidentallyTouchHelper;->DEFAULT:Landroid/view/IOplusAccidentallyTouchHelper;
@@ -222,7 +222,7 @@
 
     check-cast v0, Landroid/view/IOplusAccidentallyTouchHelper;
 
-    invoke-interface {v0, p1, p2, p3}, Landroid/view/IOplusAccidentallyTouchHelper;->updatePointerEvent(Landroid/view/MotionEvent;Landroid/view/View;Landroid/content/res/Configuration;)Landroid/view/MotionEvent;
+    invoke-interface {v0, p1, p2, p3}, Landroid/view/IOplusAccidentallyTouchHelper;->updatePointerEvent(Landroid/view/MotionEvent;Landroid/view/View;Landroid/content/res/OplusBaseConfiguration;)Landroid/view/MotionEvent;
 
     move-result-object v0
 

@@ -643,12 +643,12 @@
 
     move-result-object v2
 
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v2
 
     .line 178
-    .local v2, "cfg":Landroid/content/res/Configuration;
+    .local v2, "cfg":Landroid/content/res/OplusBaseConfiguration;
     invoke-virtual/range {p0 .. p0}, Lcom/oplus/widget/OplusGridView;->initGetureDetecor()V
 
     .line 180
@@ -696,11 +696,11 @@
 
     move-result-object v5
 
-    invoke-virtual {v5}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+    invoke-virtual {v5}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v5
 
-    iget v5, v5, Landroid/content/res/Configuration;->fontScale:F
+    iget v5, v5, Landroid/content/res/OplusBaseConfiguration;->fontScale:F
 
     .line 185
     .local v5, "fontScale":F
@@ -3853,12 +3853,12 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v0
 
     .line 233
-    .local v0, "cfg":Landroid/content/res/Configuration;
+    .local v0, "cfg":Landroid/content/res/OplusBaseConfiguration;
     iget-object v1, p0, Lcom/oplus/widget/OplusGridView;->mAppInfos:[[Lcom/oplus/widget/OplusItem;
 
     if-nez v1, :cond_0
@@ -3868,7 +3868,7 @@
 
     .line 236
     :cond_0
-    iget v1, v0, Landroid/content/res/Configuration;->orientation:I
+    iget v1, v0, Landroid/content/res/OplusBaseConfiguration;->orientation:I
 
     const/4 v2, 0x0
 

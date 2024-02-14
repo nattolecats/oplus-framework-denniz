@@ -146,11 +146,11 @@
 
     move-result-object v2
 
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v2
 
-    iget-object v2, v2, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
+    iget-object v2, v2, Landroid/content/res/OplusBaseConfiguration;->locale:Ljava/util/Locale;
 
     invoke-direct {v1, v2}, Ljava/text/DecimalFormatSymbols;-><init>(Ljava/util/Locale;)V
 
@@ -1519,11 +1519,11 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v0
 
-    iget-object v0, v0, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
+    iget-object v0, v0, Landroid/content/res/OplusBaseConfiguration;->locale:Ljava/util/Locale;
 
     invoke-virtual {v0}, Ljava/util/Locale;->getCountry()Ljava/lang/String;
 

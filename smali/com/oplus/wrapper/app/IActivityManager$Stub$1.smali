@@ -653,7 +653,7 @@
     return-object v0
 .end method
 
-.method public blacklist getConfiguration()Landroid/content/res/Configuration;
+.method public blacklist getConfiguration()Landroid/content/res/OplusBaseConfiguration;
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -664,7 +664,7 @@
     .line 276
     iget-object v0, p0, Lcom/oplus/wrapper/app/IActivityManager$Stub$1;->this$0:Lcom/oplus/wrapper/app/IActivityManager$Stub;
 
-    invoke-virtual {v0}, Lcom/oplus/wrapper/app/IActivityManager$Stub;->getConfiguration()Landroid/content/res/Configuration;
+    invoke-virtual {v0}, Lcom/oplus/wrapper/app/IActivityManager$Stub;->getConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v0
 
@@ -3542,9 +3542,9 @@
     return-void
 .end method
 
-.method public blacklist updateConfiguration(Landroid/content/res/Configuration;)Z
+.method public blacklist updateConfiguration(Landroid/content/res/OplusBaseConfiguration;)Z
     .locals 1
-    .param p1, "configuration"    # Landroid/content/res/Configuration;
+    .param p1, "configuration"    # Landroid/content/res/OplusBaseConfiguration;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
@@ -3587,9 +3587,9 @@
     return v0
 .end method
 
-.method public blacklist updatePersistentConfiguration(Landroid/content/res/Configuration;)V
+.method public blacklist updatePersistentConfiguration(Landroid/content/res/OplusBaseConfiguration;)V
     .locals 0
-    .param p1, "configuration"    # Landroid/content/res/Configuration;
+    .param p1, "configuration"    # Landroid/content/res/OplusBaseConfiguration;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
@@ -3600,9 +3600,9 @@
     return-void
 .end method
 
-.method public blacklist updatePersistentConfigurationWithAttribution(Landroid/content/res/Configuration;Ljava/lang/String;Ljava/lang/String;)V
+.method public blacklist updatePersistentConfigurationWithAttribution(Landroid/content/res/OplusBaseConfiguration;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
-    .param p1, "configuration"    # Landroid/content/res/Configuration;
+    .param p1, "configuration"    # Landroid/content/res/OplusBaseConfiguration;
     .param p2, "s"    # Ljava/lang/String;
     .param p3, "s1"    # Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;

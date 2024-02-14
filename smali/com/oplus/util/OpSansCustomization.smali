@@ -103,9 +103,9 @@
     return-void
 .end method
 
-.method static blacklist applyNewOpSansConfig(Landroid/content/res/Configuration;I)Z
+.method static blacklist applyNewOpSansConfig(Landroid/content/res/OplusBaseConfiguration;I)Z
     .locals 8
-    .param p0, "config"    # Landroid/content/res/Configuration;
+    .param p0, "config"    # Landroid/content/res/OplusBaseConfiguration;
     .param p1, "changes"    # I
 
     .line 101
@@ -1056,10 +1056,10 @@
     return v1
 .end method
 
-.method static blacklist updateOpSansConfig(Landroid/content/Context;Landroid/content/res/Configuration;I)V
+.method static blacklist updateOpSansConfig(Landroid/content/Context;Landroid/content/res/OplusBaseConfiguration;I)V
     .locals 4
     .param p0, "context"    # Landroid/content/Context;
-    .param p1, "config"    # Landroid/content/res/Configuration;
+    .param p1, "config"    # Landroid/content/res/OplusBaseConfiguration;
     .param p2, "userId"    # I
 
     .line 76

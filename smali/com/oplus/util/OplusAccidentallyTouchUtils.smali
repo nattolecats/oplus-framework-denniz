@@ -2768,17 +2768,17 @@
     return-object v0
 .end method
 
-.method public whitelist handlePointerEvent(Landroid/view/MotionEvent;Landroid/view/View;Landroid/content/res/Configuration;)Ljava/util/List;
+.method public whitelist handlePointerEvent(Landroid/view/MotionEvent;Landroid/view/View;Landroid/content/res/OplusBaseConfiguration;)Ljava/util/List;
     .locals 3
     .param p1, "event"    # Landroid/view/MotionEvent;
     .param p2, "mView"    # Landroid/view/View;
-    .param p3, "mLastConfiguration"    # Landroid/content/res/Configuration;
+    .param p3, "mLastConfiguration"    # Landroid/content/res/OplusBaseConfiguration;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/MotionEvent;",
             "Landroid/view/View;",
-            "Landroid/content/res/Configuration;",
+            "Landroid/content/res/OplusBaseConfiguration;",
             ")",
             "Ljava/util/List<",
             "Ljava/lang/Object;",
@@ -3586,11 +3586,11 @@
     return v0
 .end method
 
-.method public whitelist updatePointerEvent(Landroid/view/MotionEvent;Landroid/view/View;Landroid/content/res/Configuration;)Landroid/view/MotionEvent;
+.method public whitelist updatePointerEvent(Landroid/view/MotionEvent;Landroid/view/View;Landroid/content/res/OplusBaseConfiguration;)Landroid/view/MotionEvent;
     .locals 0
     .param p1, "event"    # Landroid/view/MotionEvent;
     .param p2, "mView"    # Landroid/view/View;
-    .param p3, "mLastConfiguration"    # Landroid/content/res/Configuration;
+    .param p3, "mLastConfiguration"    # Landroid/content/res/OplusBaseConfiguration;
 
     .line 593
     return-object p1

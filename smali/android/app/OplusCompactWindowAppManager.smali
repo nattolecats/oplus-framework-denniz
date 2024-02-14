@@ -431,7 +431,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v2
 
@@ -442,11 +442,11 @@
 
     move-result-object v2
 
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v2
 
-    iget-object v2, v2, Landroid/content/res/Configuration;->windowConfiguration:Landroid/app/WindowConfiguration;
+    iget-object v2, v2, Landroid/content/res/OplusBaseConfiguration;->windowConfiguration:Landroid/app/WindowConfiguration;
 
     invoke-virtual {v2}, Landroid/app/WindowConfiguration;->getWindowingMode()I
 
@@ -461,11 +461,11 @@
 
     move-result-object v2
 
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v2
 
-    invoke-static {v2}, Landroid/app/ResourcesManagerExtImpl;->inOplusCompatMode(Landroid/content/res/Configuration;)Z
+    invoke-static {v2}, Landroid/app/ResourcesManagerExtImpl;->inOplusCompatMode(Landroid/content/res/OplusBaseConfiguration;)Z
 
     move-result v2
 
@@ -574,11 +574,11 @@
 
     move-result-object v3
 
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v3
 
-    iget v3, v3, Landroid/content/res/Configuration;->orientation:I
+    iget v3, v3, Landroid/content/res/OplusBaseConfiguration;->orientation:I
 
     if-eq v3, v1, :cond_5
 
@@ -637,10 +637,10 @@
     return v0
 .end method
 
-.method public blacklist canOverrideConfig(Landroid/content/res/Configuration;Landroid/content/res/Configuration;)Z
+.method public blacklist canOverrideConfig(Landroid/content/res/OplusBaseConfiguration;Landroid/content/res/OplusBaseConfiguration;)Z
     .locals 3
-    .param p1, "config"    # Landroid/content/res/Configuration;
-    .param p2, "mOverrideConfiguration"    # Landroid/content/res/Configuration;
+    .param p1, "config"    # Landroid/content/res/OplusBaseConfiguration;
+    .param p2, "mOverrideConfiguration"    # Landroid/content/res/OplusBaseConfiguration;
 
     .line 260
     sget-boolean v0, Landroid/app/OplusCompactWindowAppManager;->DEBUG_COMPACT_CONFIG:Z
@@ -673,7 +673,7 @@
 
     .line 270
     :cond_2
-    iget-object v0, p1, Landroid/content/res/Configuration;->windowConfiguration:Landroid/app/WindowConfiguration;
+    iget-object v0, p1, Landroid/content/res/OplusBaseConfiguration;->windowConfiguration:Landroid/app/WindowConfiguration;
 
     invoke-virtual {v0}, Landroid/app/WindowConfiguration;->getWindowingMode()I
 
@@ -683,7 +683,7 @@
 
     if-ne v0, v2, :cond_3
 
-    iget-object v0, p2, Landroid/content/res/Configuration;->windowConfiguration:Landroid/app/WindowConfiguration;
+    iget-object v0, p2, Landroid/content/res/OplusBaseConfiguration;->windowConfiguration:Landroid/app/WindowConfiguration;
 
     .line 271
     invoke-virtual {v0}, Landroid/app/WindowConfiguration;->getWindowingMode()I
@@ -783,11 +783,11 @@
     invoke-virtual {v2, p2}, Landroid/util/DisplayMetrics;->setTo(Landroid/util/DisplayMetrics;)V
 
     .line 135
-    invoke-virtual {v1}, Landroid/view/DisplayAdjustments;->getConfiguration()Landroid/content/res/Configuration;
+    invoke-virtual {v1}, Landroid/view/DisplayAdjustments;->getConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v3
 
-    iget-object v3, v3, Landroid/content/res/Configuration;->windowConfiguration:Landroid/app/WindowConfiguration;
+    iget-object v3, v3, Landroid/content/res/OplusBaseConfiguration;->windowConfiguration:Landroid/app/WindowConfiguration;
 
     invoke-virtual {v3}, Landroid/app/WindowConfiguration;->getAppBounds()Landroid/graphics/Rect;
 
@@ -795,11 +795,11 @@
 
     .line 136
     .local v3, "widthrect":Landroid/graphics/Rect;
-    invoke-virtual {v1}, Landroid/view/DisplayAdjustments;->getConfiguration()Landroid/content/res/Configuration;
+    invoke-virtual {v1}, Landroid/view/DisplayAdjustments;->getConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v4
 
-    iget-object v4, v4, Landroid/content/res/Configuration;->windowConfiguration:Landroid/app/WindowConfiguration;
+    iget-object v4, v4, Landroid/content/res/OplusBaseConfiguration;->windowConfiguration:Landroid/app/WindowConfiguration;
 
     invoke-virtual {v4}, Landroid/app/WindowConfiguration;->getAppBounds()Landroid/graphics/Rect;
 
@@ -871,11 +871,11 @@
     if-eqz v0, :cond_1
 
     .line 197
-    invoke-virtual {v0}, Landroid/view/DisplayAdjustments;->getConfiguration()Landroid/content/res/Configuration;
+    invoke-virtual {v0}, Landroid/view/DisplayAdjustments;->getConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v1
 
-    iget-object v1, v1, Landroid/content/res/Configuration;->windowConfiguration:Landroid/app/WindowConfiguration;
+    iget-object v1, v1, Landroid/content/res/OplusBaseConfiguration;->windowConfiguration:Landroid/app/WindowConfiguration;
 
     invoke-virtual {v1}, Landroid/app/WindowConfiguration;->getAppBounds()Landroid/graphics/Rect;
 
@@ -893,18 +893,18 @@
     if-eqz p1, :cond_1
 
     .line 200
-    invoke-virtual {p1}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+    invoke-virtual {p1}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v1
 
     if-eqz v1, :cond_1
 
     .line 201
-    invoke-virtual {p1}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+    invoke-virtual {p1}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v1
 
-    iget v1, v1, Landroid/content/res/Configuration;->orientation:I
+    iget v1, v1, Landroid/content/res/OplusBaseConfiguration;->orientation:I
 
     const/4 v2, 0x2
 
@@ -1014,11 +1014,11 @@
     return-void
 .end method
 
-.method public blacklist setCompactWindowDisplayAdjustment(Landroid/content/res/ResourcesImpl;Landroid/content/res/Configuration;Landroid/content/res/Configuration;)V
+.method public blacklist setCompactWindowDisplayAdjustment(Landroid/content/res/ResourcesImpl;Landroid/content/res/OplusBaseConfiguration;Landroid/content/res/OplusBaseConfiguration;)V
     .locals 1
     .param p1, "impl"    # Landroid/content/res/ResourcesImpl;
-    .param p2, "oldOverrideConfig"    # Landroid/content/res/Configuration;
-    .param p3, "newOverrideConfig"    # Landroid/content/res/Configuration;
+    .param p2, "oldOverrideConfig"    # Landroid/content/res/OplusBaseConfiguration;
+    .param p3, "newOverrideConfig"    # Landroid/content/res/OplusBaseConfiguration;
 
     .line 172
     if-eqz p1, :cond_0
@@ -1026,16 +1026,16 @@
     .line 173
     iget-object v0, p1, Landroid/content/res/ResourcesImpl;->mResourcesImplExt:Landroid/content/res/IResourcesImplExt;
 
-    invoke-interface {v0, p2, p3}, Landroid/content/res/IResourcesImplExt;->updateCompactWindowAdjustments(Landroid/content/res/Configuration;Landroid/content/res/Configuration;)V
+    invoke-interface {v0, p2, p3}, Landroid/content/res/IResourcesImplExt;->updateCompactWindowAdjustments(Landroid/content/res/OplusBaseConfiguration;Landroid/content/res/OplusBaseConfiguration;)V
 
     .line 175
     :cond_0
     return-void
 .end method
 
-.method public blacklist updateAppBoundsForComapctWindowIfNeed(Landroid/content/res/Configuration;Landroid/util/DisplayMetrics;Z)V
+.method public blacklist updateAppBoundsForComapctWindowIfNeed(Landroid/content/res/OplusBaseConfiguration;Landroid/util/DisplayMetrics;Z)V
     .locals 6
-    .param p1, "config"    # Landroid/content/res/Configuration;
+    .param p1, "config"    # Landroid/content/res/OplusBaseConfiguration;
     .param p2, "displayMetrics"    # Landroid/util/DisplayMetrics;
     .param p3, "forceUpdateConfig"    # Z
 
@@ -1084,13 +1084,13 @@
     if-eqz p3, :cond_4
 
     .line 292
-    iget-object v1, p1, Landroid/content/res/Configuration;->windowConfiguration:Landroid/app/WindowConfiguration;
+    iget-object v1, p1, Landroid/content/res/OplusBaseConfiguration;->windowConfiguration:Landroid/app/WindowConfiguration;
 
     invoke-virtual {v1, v0}, Landroid/app/WindowConfiguration;->setWindowingMode(I)V
 
     .line 294
     :cond_4
-    iget-object v1, p1, Landroid/content/res/Configuration;->windowConfiguration:Landroid/app/WindowConfiguration;
+    iget-object v1, p1, Landroid/content/res/OplusBaseConfiguration;->windowConfiguration:Landroid/app/WindowConfiguration;
 
     invoke-virtual {v1}, Landroid/app/WindowConfiguration;->getWindowingMode()I
 
@@ -1120,7 +1120,7 @@
 
     .line 300
     :cond_6
-    iget-object v0, p1, Landroid/content/res/Configuration;->windowConfiguration:Landroid/app/WindowConfiguration;
+    iget-object v0, p1, Landroid/content/res/OplusBaseConfiguration;->windowConfiguration:Landroid/app/WindowConfiguration;
 
     invoke-virtual {v0}, Landroid/app/WindowConfiguration;->getMaxBounds()Landroid/graphics/Rect;
 
@@ -1149,7 +1149,7 @@
     add-int/lit8 v1, v1, -0x1
 
     .line 306
-    iget-object v2, p1, Landroid/content/res/Configuration;->windowConfiguration:Landroid/app/WindowConfiguration;
+    iget-object v2, p1, Landroid/content/res/OplusBaseConfiguration;->windowConfiguration:Landroid/app/WindowConfiguration;
 
     invoke-virtual {v2}, Landroid/app/WindowConfiguration;->getAppBounds()Landroid/graphics/Rect;
 
@@ -1157,7 +1157,7 @@
 
     .line 307
     .local v2, "appbounds":Landroid/graphics/Rect;
-    iget-object v3, p1, Landroid/content/res/Configuration;->windowConfiguration:Landroid/app/WindowConfiguration;
+    iget-object v3, p1, Landroid/content/res/OplusBaseConfiguration;->windowConfiguration:Landroid/app/WindowConfiguration;
 
     invoke-virtual {v3}, Landroid/app/WindowConfiguration;->getBounds()Landroid/graphics/Rect;
 
@@ -1287,22 +1287,22 @@
     return-void
 .end method
 
-.method public blacklist updateCompactWindowConfigToApplicationResourcesImpl(Landroid/content/res/Configuration;Landroid/content/res/ResourcesImpl;)V
+.method public blacklist updateCompactWindowConfigToApplicationResourcesImpl(Landroid/content/res/OplusBaseConfiguration;Landroid/content/res/ResourcesImpl;)V
     .locals 4
-    .param p1, "activityThreadConfig"    # Landroid/content/res/Configuration;
+    .param p1, "activityThreadConfig"    # Landroid/content/res/OplusBaseConfiguration;
     .param p2, "impl"    # Landroid/content/res/ResourcesImpl;
 
     .line 154
     const/4 v0, 0x0
 
     .line 155
-    .local v0, "baseConfig":Landroid/content/res/Configuration;
+    .local v0, "baseConfig":Landroid/content/res/OplusBaseConfiguration;
     if-eqz p2, :cond_0
 
     .line 156
     iget-object v1, p2, Landroid/content/res/ResourcesImpl;->mResourcesImplExt:Landroid/content/res/IResourcesImplExt;
 
-    invoke-interface {v1}, Landroid/content/res/IResourcesImplExt;->getConfiguration()Landroid/content/res/Configuration;
+    invoke-interface {v1}, Landroid/content/res/IResourcesImplExt;->getConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v0
 
@@ -1319,7 +1319,7 @@
 
     if-eqz v0, :cond_2
 
-    iget-object v1, p1, Landroid/content/res/Configuration;->windowConfiguration:Landroid/app/WindowConfiguration;
+    iget-object v1, p1, Landroid/content/res/OplusBaseConfiguration;->windowConfiguration:Landroid/app/WindowConfiguration;
 
     .line 160
     invoke-virtual {v1}, Landroid/app/WindowConfiguration;->getWindowingMode()I
@@ -1331,7 +1331,7 @@
     if-eq v1, v2, :cond_1
 
     .line 161
-    invoke-static {p1}, Landroid/app/ResourcesManagerExtImpl;->inOplusCompatMode(Landroid/content/res/Configuration;)Z
+    invoke-static {p1}, Landroid/app/ResourcesManagerExtImpl;->inOplusCompatMode(Landroid/content/res/OplusBaseConfiguration;)Z
 
     move-result v1
 
@@ -1339,15 +1339,15 @@
 
     .line 162
     :cond_1
-    new-instance v1, Landroid/content/res/Configuration;
+    new-instance v1, Landroid/content/res/OplusBaseConfiguration;
 
-    invoke-direct {v1, v0}, Landroid/content/res/Configuration;-><init>(Landroid/content/res/Configuration;)V
+    invoke-direct {v1, v0}, Landroid/content/res/OplusBaseConfiguration;-><init>(Landroid/content/res/OplusBaseConfiguration;)V
 
     .line 163
-    .local v1, "temp":Landroid/content/res/Configuration;
-    iget-object v2, v1, Landroid/content/res/Configuration;->windowConfiguration:Landroid/app/WindowConfiguration;
+    .local v1, "temp":Landroid/content/res/OplusBaseConfiguration;
+    iget-object v2, v1, Landroid/content/res/OplusBaseConfiguration;->windowConfiguration:Landroid/app/WindowConfiguration;
 
-    iget-object v3, p1, Landroid/content/res/Configuration;->windowConfiguration:Landroid/app/WindowConfiguration;
+    iget-object v3, p1, Landroid/content/res/OplusBaseConfiguration;->windowConfiguration:Landroid/app/WindowConfiguration;
 
     invoke-virtual {v3}, Landroid/app/WindowConfiguration;->getAppBounds()Landroid/graphics/Rect;
 
@@ -1356,9 +1356,9 @@
     invoke-virtual {v2, v3}, Landroid/app/WindowConfiguration;->setAppBounds(Landroid/graphics/Rect;)V
 
     .line 164
-    iget-object v2, v1, Landroid/content/res/Configuration;->windowConfiguration:Landroid/app/WindowConfiguration;
+    iget-object v2, v1, Landroid/content/res/OplusBaseConfiguration;->windowConfiguration:Landroid/app/WindowConfiguration;
 
-    iget-object v3, p1, Landroid/content/res/Configuration;->windowConfiguration:Landroid/app/WindowConfiguration;
+    iget-object v3, p1, Landroid/content/res/OplusBaseConfiguration;->windowConfiguration:Landroid/app/WindowConfiguration;
 
     invoke-virtual {v3}, Landroid/app/WindowConfiguration;->getWindowingMode()I
 
@@ -1392,18 +1392,18 @@
     .line 166
     const/4 v2, 0x0
 
-    invoke-virtual {p2, v1, v2, v2}, Landroid/content/res/ResourcesImpl;->updateConfiguration(Landroid/content/res/Configuration;Landroid/util/DisplayMetrics;Landroid/content/res/CompatibilityInfo;)V
+    invoke-virtual {p2, v1, v2, v2}, Landroid/content/res/ResourcesImpl;->updateConfiguration(Landroid/content/res/OplusBaseConfiguration;Landroid/util/DisplayMetrics;Landroid/content/res/CompatibilityInfo;)V
 
     .line 168
-    .end local v1    # "temp":Landroid/content/res/Configuration;
+    .end local v1    # "temp":Landroid/content/res/OplusBaseConfiguration;
     :cond_2
     return-void
 .end method
 
-.method public blacklist updateCustomDarkModeForWechat(Landroid/content/res/Configuration;Landroid/content/res/Configuration;Landroid/content/res/ResourcesImpl;Ljava/lang/String;)V
+.method public blacklist updateCustomDarkModeForWechat(Landroid/content/res/OplusBaseConfiguration;Landroid/content/res/OplusBaseConfiguration;Landroid/content/res/ResourcesImpl;Ljava/lang/String;)V
     .locals 6
-    .param p1, "targetConfig"    # Landroid/content/res/Configuration;
-    .param p2, "threadConfig"    # Landroid/content/res/Configuration;
+    .param p1, "targetConfig"    # Landroid/content/res/OplusBaseConfiguration;
+    .param p2, "threadConfig"    # Landroid/content/res/OplusBaseConfiguration;
     .param p3, "targetImpl"    # Landroid/content/res/ResourcesImpl;
     .param p4, "currentProcessName"    # Ljava/lang/String;
 
@@ -1425,12 +1425,12 @@
     .line 227
     iget-object v0, p3, Landroid/content/res/ResourcesImpl;->mResourcesImplExt:Landroid/content/res/IResourcesImplExt;
 
-    invoke-interface {v0}, Landroid/content/res/IResourcesImplExt;->getConfiguration()Landroid/content/res/Configuration;
+    invoke-interface {v0}, Landroid/content/res/IResourcesImplExt;->getConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v0
 
     .line 228
-    .local v0, "baseConfig":Landroid/content/res/Configuration;
+    .local v0, "baseConfig":Landroid/content/res/OplusBaseConfiguration;
     if-eqz v0, :cond_3
 
     invoke-static {}, Landroid/app/ActivityThread;->currentApplication()Landroid/app/Application;
@@ -1471,7 +1471,7 @@
 
     .line 231
     .local v1, "currentUser":I
-    iget v2, v0, Landroid/content/res/Configuration;->uiMode:I
+    iget v2, v0, Landroid/content/res/OplusBaseConfiguration;->uiMode:I
 
     and-int/lit8 v2, v2, 0x30
 
@@ -1481,32 +1481,32 @@
 
     if-ne v2, v4, :cond_0
 
-    iget v2, p2, Landroid/content/res/Configuration;->uiMode:I
+    iget v2, p2, Landroid/content/res/OplusBaseConfiguration;->uiMode:I
 
     and-int/lit8 v2, v2, 0x30
 
     if-ne v2, v3, :cond_0
 
-    iget v2, p1, Landroid/content/res/Configuration;->uiMode:I
+    iget v2, p1, Landroid/content/res/OplusBaseConfiguration;->uiMode:I
 
     and-int/lit8 v2, v2, 0x30
 
     if-eq v2, v3, :cond_1
 
     :cond_0
-    iget v2, v0, Landroid/content/res/Configuration;->uiMode:I
+    iget v2, v0, Landroid/content/res/OplusBaseConfiguration;->uiMode:I
 
     and-int/lit8 v2, v2, 0x30
 
     if-ne v2, v3, :cond_2
 
-    iget v2, p2, Landroid/content/res/Configuration;->uiMode:I
+    iget v2, p2, Landroid/content/res/OplusBaseConfiguration;->uiMode:I
 
     and-int/lit8 v2, v2, 0x30
 
     if-ne v2, v4, :cond_2
 
-    iget v2, p1, Landroid/content/res/Configuration;->uiMode:I
+    iget v2, p1, Landroid/content/res/OplusBaseConfiguration;->uiMode:I
 
     and-int/lit8 v2, v2, 0x30
 
@@ -1555,12 +1555,12 @@
     if-eq v4, v3, :cond_3
 
     .line 244
-    iget v4, v0, Landroid/content/res/Configuration;->uiMode:I
+    iget v4, v0, Landroid/content/res/OplusBaseConfiguration;->uiMode:I
 
-    iput v4, p1, Landroid/content/res/Configuration;->uiMode:I
+    iput v4, p1, Landroid/content/res/OplusBaseConfiguration;->uiMode:I
 
     .line 249
-    .end local v0    # "baseConfig":Landroid/content/res/Configuration;
+    .end local v0    # "baseConfig":Landroid/content/res/OplusBaseConfiguration;
     .end local v1    # "currentUser":I
     .end local v2    # "shouldModifyConfig":Z
     .end local v3    # "uiModeSetting":I

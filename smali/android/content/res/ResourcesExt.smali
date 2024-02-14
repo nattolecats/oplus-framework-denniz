@@ -41,13 +41,13 @@
 
 
 # virtual methods
-.method public blacklist getConfiguration()Landroid/content/res/Configuration;
+.method public blacklist getConfiguration()Landroid/content/res/OplusBaseConfiguration;
     .locals 1
 
     .line 79
     iget-object v0, p0, Landroid/content/res/ResourcesExt;->mResourcesImplExt:Landroid/content/res/IResourcesImplExt;
 
-    invoke-interface {v0}, Landroid/content/res/IResourcesImplExt;->getConfiguration()Landroid/content/res/Configuration;
+    invoke-interface {v0}, Landroid/content/res/IResourcesImplExt;->getConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v0
 
@@ -63,13 +63,13 @@
     return-object v0
 .end method
 
-.method public blacklist getSystemConfiguration()Landroid/content/res/Configuration;
+.method public blacklist getSystemConfiguration()Landroid/content/res/OplusBaseConfiguration;
     .locals 1
 
     .line 83
     iget-object v0, p0, Landroid/content/res/ResourcesExt;->mResourcesImplExt:Landroid/content/res/IResourcesImplExt;
 
-    invoke-interface {v0}, Landroid/content/res/IResourcesImplExt;->getSystemConfiguration()Landroid/content/res/Configuration;
+    invoke-interface {v0}, Landroid/content/res/IResourcesImplExt;->getSystemConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v0
 

@@ -38,7 +38,7 @@
 
 
 # virtual methods
-.method public whitelist getConfiguration()Landroid/content/res/Configuration;
+.method public whitelist getConfiguration()Landroid/content/res/OplusBaseConfiguration;
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -49,7 +49,7 @@
     .line 1247
     iget-object v0, p0, Lcom/oplus/wrapper/app/IActivityManager$Stub$Proxy;->mTarget:Landroid/app/IActivityManager;
 
-    invoke-interface {v0}, Landroid/app/IActivityManager;->getConfiguration()Landroid/content/res/Configuration;
+    invoke-interface {v0}, Landroid/app/IActivityManager;->getConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v0
 

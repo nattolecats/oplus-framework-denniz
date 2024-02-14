@@ -109,11 +109,11 @@
 
     move-result-object v1
 
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/oplus/util/PairTaskIconBuilder;->getUxIconConfig(Landroid/content/res/Configuration;)J
+    invoke-static {v1}, Lcom/oplus/util/PairTaskIconBuilder;->getUxIconConfig(Landroid/content/res/OplusBaseConfiguration;)J
 
     move-result-wide v1
 
@@ -635,9 +635,9 @@
     return-object v0
 .end method
 
-.method private static blacklist getUxIconConfig(Landroid/content/res/Configuration;)J
+.method private static blacklist getUxIconConfig(Landroid/content/res/OplusBaseConfiguration;)J
     .locals 5
-    .param p0, "configuration"    # Landroid/content/res/Configuration;
+    .param p0, "configuration"    # Landroid/content/res/OplusBaseConfiguration;
 
     .line 89
     const-wide/16 v0, -0x1
@@ -645,7 +645,7 @@
     .line 91
     .local v0, "result":J
     :try_start_0
-    invoke-static {p0}, Lcom/oplus/util/PairTaskIconBuilder;->typeCasting(Landroid/content/res/Configuration;)Landroid/content/res/OplusBaseConfiguration;
+    invoke-static {p0}, Lcom/oplus/util/PairTaskIconBuilder;->typeCasting(Landroid/content/res/OplusBaseConfiguration;)Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v2
 
@@ -1211,9 +1211,9 @@
     return-object v2
 .end method
 
-.method private static blacklist typeCasting(Landroid/content/res/Configuration;)Landroid/content/res/OplusBaseConfiguration;
+.method private static blacklist typeCasting(Landroid/content/res/OplusBaseConfiguration;)Landroid/content/res/OplusBaseConfiguration;
     .locals 1
-    .param p0, "configuration"    # Landroid/content/res/Configuration;
+    .param p0, "configuration"    # Landroid/content/res/OplusBaseConfiguration;
 
     .line 102
     const-class v0, Landroid/content/res/OplusBaseConfiguration;

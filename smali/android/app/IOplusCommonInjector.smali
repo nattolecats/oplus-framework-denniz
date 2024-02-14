@@ -26,9 +26,9 @@
 
 
 # virtual methods
-.method public whitelist applyConfigurationToResourcesForResourcesManager(Landroid/content/res/Configuration;I)V
+.method public whitelist applyConfigurationToResourcesForResourcesManager(Landroid/content/res/OplusBaseConfiguration;I)V
     .locals 0
-    .param p1, "config"    # Landroid/content/res/Configuration;
+    .param p1, "config"    # Landroid/content/res/OplusBaseConfiguration;
     .param p2, "changes"    # I
 
     .line 50
@@ -84,10 +84,10 @@
     return-object v0
 .end method
 
-.method public whitelist onConfigurationChangedForApplication(Landroid/app/Application;Landroid/content/res/Configuration;)V
+.method public whitelist onConfigurationChangedForApplication(Landroid/app/Application;Landroid/content/res/OplusBaseConfiguration;)V
     .locals 0
     .param p1, "application"    # Landroid/app/Application;
-    .param p2, "newConfig"    # Landroid/content/res/Configuration;
+    .param p2, "newConfig"    # Landroid/content/res/OplusBaseConfiguration;
 
     .line 52
     return-void

@@ -432,17 +432,17 @@
 
     if-eqz p1, :cond_3
 
-    invoke-virtual {p1}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+    invoke-virtual {p1}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v0
 
     if-eqz v0, :cond_3
 
-    invoke-virtual {p1}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+    invoke-virtual {p1}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v0
 
-    iget-object v0, v0, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
+    iget-object v0, v0, Landroid/content/res/OplusBaseConfiguration;->locale:Ljava/util/Locale;
 
     if-eqz v0, :cond_3
 
@@ -457,11 +457,11 @@
 
     .line 70
     .local v0, "sysLocale":Ljava/lang/String;
-    invoke-virtual {p1}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+    invoke-virtual {p1}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v1
 
-    iget-object v1, v1, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
+    iget-object v1, v1, Landroid/content/res/OplusBaseConfiguration;->locale:Ljava/util/Locale;
 
     invoke-virtual {v1}, Ljava/util/Locale;->toString()Ljava/lang/String;
 
@@ -559,10 +559,10 @@
     return-void
 .end method
 
-.method public whitelist updateRtlParameterForUG(Landroid/content/res/Resources;Landroid/content/res/Configuration;)V
+.method public whitelist updateRtlParameterForUG(Landroid/content/res/Resources;Landroid/content/res/OplusBaseConfiguration;)V
     .locals 1
     .param p1, "res"    # Landroid/content/res/Resources;
-    .param p2, "newConfig"    # Landroid/content/res/Configuration;
+    .param p2, "newConfig"    # Landroid/content/res/OplusBaseConfiguration;
 
     .line 202
     if-eqz p1, :cond_0
@@ -582,17 +582,17 @@
 
     move-result-object v0
 
-    invoke-virtual {p0, v0, p2}, Landroid/widget/OplusTextViewRTLUtilForUG;->updateRtlParameterForUG([Ljava/lang/String;Landroid/content/res/Configuration;)V
+    invoke-virtual {p0, v0, p2}, Landroid/widget/OplusTextViewRTLUtilForUG;->updateRtlParameterForUG([Ljava/lang/String;Landroid/content/res/OplusBaseConfiguration;)V
 
     .line 205
     :cond_0
     return-void
 .end method
 
-.method public whitelist updateRtlParameterForUG([Ljava/lang/String;Landroid/content/res/Configuration;)V
+.method public whitelist updateRtlParameterForUG([Ljava/lang/String;Landroid/content/res/OplusBaseConfiguration;)V
     .locals 6
     .param p1, "availableLocales"    # [Ljava/lang/String;
-    .param p2, "newConfig"    # Landroid/content/res/Configuration;
+    .param p2, "newConfig"    # Landroid/content/res/OplusBaseConfiguration;
 
     .line 209
     iget-boolean v0, p0, Landroid/widget/OplusTextViewRTLUtilForUG;->hasInit:Z
@@ -603,11 +603,11 @@
 
     if-eqz p2, :cond_3
 
-    iget-object v0, p2, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
+    iget-object v0, p2, Landroid/content/res/OplusBaseConfiguration;->locale:Ljava/util/Locale;
 
     if-eqz v0, :cond_3
 
-    iget-object v0, p2, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
+    iget-object v0, p2, Landroid/content/res/OplusBaseConfiguration;->locale:Ljava/util/Locale;
 
     iget-object v1, p0, Landroid/widget/OplusTextViewRTLUtilForUG;->mLastUpdateLocale:Ljava/util/Locale;
 
@@ -631,7 +631,7 @@
     iput-boolean v1, p0, Landroid/widget/OplusTextViewRTLUtilForUG;->mSupportRtl:Z
 
     .line 213
-    iget-object v2, p2, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
+    iget-object v2, p2, Landroid/content/res/OplusBaseConfiguration;->locale:Ljava/util/Locale;
 
     invoke-virtual {v2}, Ljava/util/Locale;->toLanguageTag()Ljava/lang/String;
 
@@ -699,7 +699,7 @@
     .end local v4    # "locales":[Ljava/lang/String;
     :cond_2
     :goto_1
-    iget-object v0, p2, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
+    iget-object v0, p2, Landroid/content/res/OplusBaseConfiguration;->locale:Ljava/util/Locale;
 
     iput-object v0, p0, Landroid/widget/OplusTextViewRTLUtilForUG;->mLastUpdateLocale:Ljava/util/Locale;
 

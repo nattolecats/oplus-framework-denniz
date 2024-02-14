@@ -148,10 +148,10 @@
     return-void
 .end method
 
-.method public whitelist updateRtlParameterForUG(Landroid/content/res/Resources;Landroid/content/res/Configuration;)V
+.method public whitelist updateRtlParameterForUG(Landroid/content/res/Resources;Landroid/content/res/OplusBaseConfiguration;)V
     .locals 0
     .param p1, "res"    # Landroid/content/res/Resources;
-    .param p2, "newConfig"    # Landroid/content/res/Configuration;
+    .param p2, "newConfig"    # Landroid/content/res/OplusBaseConfiguration;
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -159,10 +159,10 @@
     return-void
 .end method
 
-.method public whitelist updateRtlParameterForUG([Ljava/lang/String;Landroid/content/res/Configuration;)V
+.method public whitelist updateRtlParameterForUG([Ljava/lang/String;Landroid/content/res/OplusBaseConfiguration;)V
     .locals 0
     .param p1, "availableLocales"    # [Ljava/lang/String;
-    .param p2, "newConfig"    # Landroid/content/res/Configuration;
+    .param p2, "newConfig"    # Landroid/content/res/OplusBaseConfiguration;
 
     .line 75
     return-void

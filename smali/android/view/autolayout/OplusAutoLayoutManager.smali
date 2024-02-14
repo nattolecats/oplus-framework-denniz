@@ -651,9 +651,9 @@
     return-void
 .end method
 
-.method public blacklist setTo(Landroid/content/res/Configuration;)V
+.method public blacklist setTo(Landroid/content/res/OplusBaseConfiguration;)V
     .locals 3
-    .param p1, "configuration"    # Landroid/content/res/Configuration;
+    .param p1, "configuration"    # Landroid/content/res/OplusBaseConfiguration;
 
     .line 151
     invoke-direct {p0}, Landroid/view/autolayout/OplusAutoLayoutManager;->isInAutoLayoutList()Z
@@ -663,7 +663,7 @@
     if-eqz v0, :cond_0
 
     .line 152
-    iget v0, p1, Landroid/content/res/Configuration;->densityDpi:I
+    iget v0, p1, Landroid/content/res/OplusBaseConfiguration;->densityDpi:I
 
     int-to-float v0, v0
 
@@ -679,14 +679,14 @@
 
     float-to-int v2, v2
 
-    iput v2, p1, Landroid/content/res/Configuration;->screenWidthDp:I
+    iput v2, p1, Landroid/content/res/OplusBaseConfiguration;->screenWidthDp:I
 
     .line 154
     div-float/2addr v1, v0
 
     float-to-int v1, v1
 
-    iput v1, p1, Landroid/content/res/Configuration;->smallestScreenWidthDp:I
+    iput v1, p1, Landroid/content/res/OplusBaseConfiguration;->smallestScreenWidthDp:I
 
     .line 156
     .end local v0    # "density":F
@@ -724,9 +724,9 @@
     return-void
 .end method
 
-.method public blacklist updateFrom(Landroid/content/res/Configuration;)V
+.method public blacklist updateFrom(Landroid/content/res/OplusBaseConfiguration;)V
     .locals 3
-    .param p1, "configuration"    # Landroid/content/res/Configuration;
+    .param p1, "configuration"    # Landroid/content/res/OplusBaseConfiguration;
 
     .line 160
     invoke-direct {p0}, Landroid/view/autolayout/OplusAutoLayoutManager;->isInAutoLayoutList()Z
@@ -736,7 +736,7 @@
     if-eqz v0, :cond_0
 
     .line 161
-    iget v0, p1, Landroid/content/res/Configuration;->densityDpi:I
+    iget v0, p1, Landroid/content/res/OplusBaseConfiguration;->densityDpi:I
 
     int-to-float v0, v0
 
@@ -752,14 +752,14 @@
 
     float-to-int v2, v2
 
-    iput v2, p1, Landroid/content/res/Configuration;->screenWidthDp:I
+    iput v2, p1, Landroid/content/res/OplusBaseConfiguration;->screenWidthDp:I
 
     .line 163
     div-float/2addr v1, v0
 
     float-to-int v1, v1
 
-    iput v1, p1, Landroid/content/res/Configuration;->smallestScreenWidthDp:I
+    iput v1, p1, Landroid/content/res/OplusBaseConfiguration;->smallestScreenWidthDp:I
 
     .line 165
     .end local v0    # "density":F

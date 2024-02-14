@@ -370,9 +370,9 @@
     return v0
 .end method
 
-.method public whitelist onConfigurationChanged(Landroid/content/res/Configuration;)V
+.method public whitelist onConfigurationChanged(Landroid/content/res/OplusBaseConfiguration;)V
     .locals 0
-    .param p1, "newConfig"    # Landroid/content/res/Configuration;
+    .param p1, "newConfig"    # Landroid/content/res/OplusBaseConfiguration;
 
     .line 125
     return-void

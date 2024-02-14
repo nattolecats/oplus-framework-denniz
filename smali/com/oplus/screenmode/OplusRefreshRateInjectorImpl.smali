@@ -615,11 +615,11 @@
 
     move-result-object v3
 
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v3
 
-    iget v3, v3, Landroid/content/res/Configuration;->orientation:I
+    iget v3, v3, Landroid/content/res/OplusBaseConfiguration;->orientation:I
 
     if-ne v3, v4, :cond_2
 

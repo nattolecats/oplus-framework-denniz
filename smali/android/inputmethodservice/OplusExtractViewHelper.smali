@@ -226,11 +226,11 @@
 
     move-result-object v11
 
-    invoke-virtual {v11}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+    invoke-virtual {v11}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v11
 
-    iget v11, v11, Landroid/content/res/Configuration;->uiMode:I
+    iget v11, v11, Landroid/content/res/OplusBaseConfiguration;->uiMode:I
 
     and-int/lit8 v11, v11, 0x30
 

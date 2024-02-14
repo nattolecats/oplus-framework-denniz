@@ -1027,11 +1027,11 @@
 
     .line 701
     :cond_2
-    invoke-virtual {p1}, Landroid/util/MergedConfiguration;->getOverrideConfiguration()Landroid/content/res/Configuration;
+    invoke-virtual {p1}, Landroid/util/MergedConfiguration;->getOverrideConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v1
 
-    iget-object v1, v1, Landroid/content/res/Configuration;->windowConfiguration:Landroid/app/WindowConfiguration;
+    iget-object v1, v1, Landroid/content/res/OplusBaseConfiguration;->windowConfiguration:Landroid/app/WindowConfiguration;
 
     invoke-virtual {v1}, Landroid/app/WindowConfiguration;->getBounds()Landroid/graphics/Rect;
 
@@ -1560,31 +1560,31 @@
     return-void
 .end method
 
-.method public blacklist setDarkModeProgress(Landroid/view/View;Landroid/content/res/Configuration;)V
+.method public blacklist setDarkModeProgress(Landroid/view/View;Landroid/content/res/OplusBaseConfiguration;)V
     .locals 1
     .param p1, "view"    # Landroid/view/View;
-    .param p2, "globalConfig"    # Landroid/content/res/Configuration;
+    .param p2, "globalConfig"    # Landroid/content/res/OplusBaseConfiguration;
 
     .line 192
     iget-object v0, p0, Landroid/view/ViewRootImplExtImpl;->mManager:Lcom/oplus/darkmode/IOplusDarkModeManager;
 
-    invoke-interface {v0, p1, p2}, Lcom/oplus/darkmode/IOplusDarkModeManager;->setDarkModeProgress(Landroid/view/View;Landroid/content/res/Configuration;)Z
+    invoke-interface {v0, p1, p2}, Lcom/oplus/darkmode/IOplusDarkModeManager;->setDarkModeProgress(Landroid/view/View;Landroid/content/res/OplusBaseConfiguration;)Z
 
     .line 195
     invoke-static {}, Lcom/oplus/bracket/OplusBracketModeManager;->getInstance()Lcom/oplus/bracket/OplusBracketModeManager;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1, p2}, Lcom/oplus/bracket/OplusBracketModeManager;->onConfigChange(Landroid/view/View;Landroid/content/res/Configuration;)V
+    invoke-virtual {v0, p1, p2}, Lcom/oplus/bracket/OplusBracketModeManager;->onConfigChange(Landroid/view/View;Landroid/content/res/OplusBaseConfiguration;)V
 
     .line 197
     return-void
 .end method
 
-.method public blacklist setLastReportedMergedConfiguration(Landroid/view/View;Landroid/content/res/Configuration;Landroid/content/Context;)V
+.method public blacklist setLastReportedMergedConfiguration(Landroid/view/View;Landroid/content/res/OplusBaseConfiguration;Landroid/content/Context;)V
     .locals 3
     .param p1, "mView"    # Landroid/view/View;
-    .param p2, "newConfig"    # Landroid/content/res/Configuration;
+    .param p2, "newConfig"    # Landroid/content/res/OplusBaseConfiguration;
     .param p3, "context"    # Landroid/content/Context;
 
     .line 416
@@ -1627,7 +1627,7 @@
 
     check-cast v2, Lcom/android/internal/policy/DecorView;
 
-    invoke-virtual {v0, p2, p3, v1, v2}, Lcom/android/internal/policy/OplusZoomWindowDecorViewHelper;->setLastReportedMergedConfiguration(Landroid/content/res/Configuration;Landroid/content/Context;Lcom/android/internal/policy/PhoneWindow;Lcom/android/internal/policy/DecorView;)V
+    invoke-virtual {v0, p2, p3, v1, v2}, Lcom/android/internal/policy/OplusZoomWindowDecorViewHelper;->setLastReportedMergedConfiguration(Landroid/content/res/OplusBaseConfiguration;Landroid/content/Context;Lcom/android/internal/policy/PhoneWindow;Lcom/android/internal/policy/DecorView;)V
 
     .line 420
     :cond_0
@@ -1785,11 +1785,11 @@
     .param p3, "transaction"    # Landroid/view/SurfaceControl$Transaction;
 
     .line 457
-    invoke-virtual {p1}, Landroid/util/MergedConfiguration;->getMergedConfiguration()Landroid/content/res/Configuration;
+    invoke-virtual {p1}, Landroid/util/MergedConfiguration;->getMergedConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v0
 
-    iget-object v0, v0, Landroid/content/res/Configuration;->windowConfiguration:Landroid/app/WindowConfiguration;
+    iget-object v0, v0, Landroid/content/res/OplusBaseConfiguration;->windowConfiguration:Landroid/app/WindowConfiguration;
 
     invoke-virtual {v0}, Landroid/app/WindowConfiguration;->getWindowingMode()I
 

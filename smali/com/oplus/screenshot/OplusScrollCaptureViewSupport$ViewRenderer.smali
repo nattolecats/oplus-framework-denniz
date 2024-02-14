@@ -298,11 +298,11 @@
 
     move-result-object v1
 
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Landroid/content/res/Configuration;->isNightModeActive()Z
+    invoke-virtual {v1}, Landroid/content/res/OplusBaseConfiguration;->isNightModeActive()Z
 
     move-result v1
 

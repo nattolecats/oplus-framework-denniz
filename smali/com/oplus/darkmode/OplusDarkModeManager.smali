@@ -607,9 +607,9 @@
     .end packed-switch
 .end method
 
-.method private blacklist setDarkStyleArgs(Landroid/content/res/Configuration;)Z
+.method private blacklist setDarkStyleArgs(Landroid/content/res/OplusBaseConfiguration;)Z
     .locals 4
-    .param p1, "configuration"    # Landroid/content/res/Configuration;
+    .param p1, "configuration"    # Landroid/content/res/OplusBaseConfiguration;
 
     .line 129
     const-class v0, Landroid/content/res/OplusBaseConfiguration;
@@ -962,13 +962,13 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v0
 
     .line 466
-    .local v0, "configuration":Landroid/content/res/Configuration;
-    iget v1, v0, Landroid/content/res/Configuration;->uiMode:I
+    .local v0, "configuration":Landroid/content/res/OplusBaseConfiguration;
+    iget v1, v0, Landroid/content/res/OplusBaseConfiguration;->uiMode:I
 
     and-int/lit8 v1, v1, 0x30
 
@@ -2282,11 +2282,11 @@
 
     move-result-object v4
 
-    invoke-virtual {v4}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+    invoke-virtual {v4}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v4
 
-    invoke-direct {p0, v4}, Lcom/oplus/darkmode/OplusDarkModeManager;->setDarkStyleArgs(Landroid/content/res/Configuration;)Z
+    invoke-direct {p0, v4}, Lcom/oplus/darkmode/OplusDarkModeManager;->setDarkStyleArgs(Landroid/content/res/OplusBaseConfiguration;)Z
 
     .line 231
     invoke-direct {p0}, Lcom/oplus/darkmode/OplusDarkModeManager;->checkThirdInvertArgs()V
@@ -2391,10 +2391,10 @@
     return-void
 .end method
 
-.method public whitelist setDarkModeProgress(Landroid/view/View;Landroid/content/res/Configuration;)Z
+.method public whitelist setDarkModeProgress(Landroid/view/View;Landroid/content/res/OplusBaseConfiguration;)Z
     .locals 8
     .param p1, "decor"    # Landroid/view/View;
-    .param p2, "configuration"    # Landroid/content/res/Configuration;
+    .param p2, "configuration"    # Landroid/content/res/OplusBaseConfiguration;
 
     .line 149
     const/4 v0, 0x0
@@ -2410,7 +2410,7 @@
 
     .line 153
     .local v1, "result":Z
-    invoke-direct {p0, p2}, Lcom/oplus/darkmode/OplusDarkModeManager;->setDarkStyleArgs(Landroid/content/res/Configuration;)Z
+    invoke-direct {p0, p2}, Lcom/oplus/darkmode/OplusDarkModeManager;->setDarkStyleArgs(Landroid/content/res/OplusBaseConfiguration;)Z
 
     move-result v2
 
@@ -2589,10 +2589,10 @@
     return v1
 .end method
 
-.method public whitelist shouldInterceptConfigRelaunch(ILandroid/content/res/Configuration;)Z
+.method public whitelist shouldInterceptConfigRelaunch(ILandroid/content/res/OplusBaseConfiguration;)Z
     .locals 6
     .param p1, "diff"    # I
-    .param p2, "configuration"    # Landroid/content/res/Configuration;
+    .param p2, "configuration"    # Landroid/content/res/OplusBaseConfiguration;
 
     .line 107
     const/high16 v0, 0x10000000

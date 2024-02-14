@@ -304,7 +304,7 @@
     .line 125
     iget-object v0, p0, Landroid/content/res/OplusAccessibleResources;->mResources:Landroid/content/res/IResourcesImplExt;
 
-    invoke-interface {v0}, Landroid/content/res/IResourcesImplExt;->getSystemConfiguration()Landroid/content/res/Configuration;
+    invoke-interface {v0}, Landroid/content/res/IResourcesImplExt;->getSystemConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v0
 
@@ -339,7 +339,7 @@
     .line 133
     iget-object v0, p0, Landroid/content/res/OplusAccessibleResources;->mResources:Landroid/content/res/IResourcesImplExt;
 
-    invoke-interface {v0}, Landroid/content/res/IResourcesImplExt;->getSystemConfiguration()Landroid/content/res/Configuration;
+    invoke-interface {v0}, Landroid/content/res/IResourcesImplExt;->getSystemConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v0
 

@@ -87,11 +87,11 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v0
 
-    iget-object v0, v0, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
+    iget-object v0, v0, Landroid/content/res/OplusBaseConfiguration;->locale:Ljava/util/Locale;
 
     iput-object v0, p0, Lcom/oplus/widget/OplusAppFullScreenLayoutLandscape;->mLocale:Ljava/util/Locale;
 
@@ -129,12 +129,12 @@
 
 
 # virtual methods
-.method protected whitelist onConfigurationChanged(Landroid/content/res/Configuration;)V
+.method protected whitelist onConfigurationChanged(Landroid/content/res/OplusBaseConfiguration;)V
     .locals 4
-    .param p1, "newConfig"    # Landroid/content/res/Configuration;
+    .param p1, "newConfig"    # Landroid/content/res/OplusBaseConfiguration;
 
     .line 95
-    invoke-super {p0, p1}, Landroid/widget/LinearLayout;->onConfigurationChanged(Landroid/content/res/Configuration;)V
+    invoke-super {p0, p1}, Landroid/widget/LinearLayout;->onConfigurationChanged(Landroid/content/res/OplusBaseConfiguration;)V
 
     .line 96
     if-eqz p1, :cond_2
@@ -150,14 +150,14 @@
 
     .line 98
     .local v0, "textView":Landroid/widget/TextView;
-    iget-object v1, p1, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
+    iget-object v1, p1, Landroid/content/res/OplusBaseConfiguration;->locale:Ljava/util/Locale;
 
     iget-object v2, p0, Lcom/oplus/widget/OplusAppFullScreenLayoutLandscape;->mLocale:Ljava/util/Locale;
 
     if-eq v1, v2, :cond_0
 
     .line 99
-    iget-object v1, p1, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
+    iget-object v1, p1, Landroid/content/res/OplusBaseConfiguration;->locale:Ljava/util/Locale;
 
     iput-object v1, p0, Lcom/oplus/widget/OplusAppFullScreenLayoutLandscape;->mLocale:Ljava/util/Locale;
 

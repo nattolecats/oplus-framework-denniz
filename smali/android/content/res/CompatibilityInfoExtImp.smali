@@ -33,9 +33,9 @@
 
 
 # virtual methods
-.method public blacklist applyToConfiguration(Landroid/content/res/Configuration;Landroid/content/res/CompatibilityInfo;I)V
+.method public blacklist applyToConfiguration(Landroid/content/res/OplusBaseConfiguration;Landroid/content/res/CompatibilityInfo;I)V
     .locals 2
-    .param p1, "inoutConfig"    # Landroid/content/res/Configuration;
+    .param p1, "inoutConfig"    # Landroid/content/res/OplusBaseConfiguration;
     .param p2, "compat"    # Landroid/content/res/CompatibilityInfo;
     .param p3, "compatFlags"    # I
 
@@ -50,12 +50,12 @@
 
     if-eqz v1, :cond_0
 
-    iget v1, p1, Landroid/content/res/Configuration;->densityDpi:I
+    iget v1, p1, Landroid/content/res/OplusBaseConfiguration;->densityDpi:I
 
     if-eq v1, v0, :cond_0
 
     .line 84
-    iput v0, p1, Landroid/content/res/Configuration;->densityDpi:I
+    iput v0, p1, Landroid/content/res/OplusBaseConfiguration;->densityDpi:I
 
     .line 86
     :cond_0

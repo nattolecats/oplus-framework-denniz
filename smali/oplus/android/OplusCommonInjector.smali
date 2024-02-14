@@ -297,9 +297,9 @@
 
 
 # virtual methods
-.method public whitelist applyConfigurationToResourcesForResourcesManager(Landroid/content/res/Configuration;I)V
+.method public whitelist applyConfigurationToResourcesForResourcesManager(Landroid/content/res/OplusBaseConfiguration;I)V
     .locals 3
-    .param p1, "config"    # Landroid/content/res/Configuration;
+    .param p1, "config"    # Landroid/content/res/OplusBaseConfiguration;
     .param p2, "changes"    # I
 
     .line 87
@@ -322,7 +322,7 @@
 
     check-cast v0, Lcom/oplus/font/IOplusFontManager;
 
-    invoke-interface {v0, p1, p2}, Lcom/oplus/font/IOplusFontManager;->updateTypefaceInCurrProcess(Landroid/content/res/Configuration;I)V
+    invoke-interface {v0, p1, p2}, Lcom/oplus/font/IOplusFontManager;->updateTypefaceInCurrProcess(Landroid/content/res/OplusBaseConfiguration;I)V
 
     .line 95
     sget-object v0, Landroid/content/res/IOplusThemeManager;->DEFAULT:Landroid/content/res/IOplusThemeManager;
@@ -516,10 +516,10 @@
     return-void
 .end method
 
-.method public whitelist onConfigurationChangedForApplication(Landroid/app/Application;Landroid/content/res/Configuration;)V
+.method public whitelist onConfigurationChangedForApplication(Landroid/app/Application;Landroid/content/res/OplusBaseConfiguration;)V
     .locals 2
     .param p1, "application"    # Landroid/app/Application;
-    .param p2, "newConfig"    # Landroid/content/res/Configuration;
+    .param p2, "newConfig"    # Landroid/content/res/OplusBaseConfiguration;
 
     .line 68
     sget-object v0, Lcom/oplus/font/IOplusFontManager;->DEFAULT:Lcom/oplus/font/IOplusFontManager;
@@ -534,7 +534,7 @@
 
     check-cast v0, Lcom/oplus/font/IOplusFontManager;
 
-    invoke-interface {v0, p2}, Lcom/oplus/font/IOplusFontManager;->updateLanguageLocale(Landroid/content/res/Configuration;)V
+    invoke-interface {v0, p2}, Lcom/oplus/font/IOplusFontManager;->updateLanguageLocale(Landroid/content/res/OplusBaseConfiguration;)V
 
     .line 70
     return-void

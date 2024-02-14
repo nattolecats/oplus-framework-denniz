@@ -127,11 +127,11 @@
     return-void
 .end method
 
-.method public whitelist updatePointerEvent(Landroid/view/MotionEvent;Landroid/view/View;Landroid/content/res/Configuration;)Landroid/view/MotionEvent;
+.method public whitelist updatePointerEvent(Landroid/view/MotionEvent;Landroid/view/View;Landroid/content/res/OplusBaseConfiguration;)Landroid/view/MotionEvent;
     .locals 0
     .param p1, "event"    # Landroid/view/MotionEvent;
     .param p2, "mView"    # Landroid/view/View;
-    .param p3, "mLastConfiguration"    # Landroid/content/res/Configuration;
+    .param p3, "mLastConfiguration"    # Landroid/content/res/OplusBaseConfiguration;
 
     .line 56
     return-object p1

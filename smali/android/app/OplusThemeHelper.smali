@@ -118,10 +118,10 @@
     return-object v0
 .end method
 
-.method public static whitelist handleExtraConfigurationChanges(ILandroid/content/res/Configuration;Landroid/content/Context;Landroid/os/Handler;)V
+.method public static whitelist handleExtraConfigurationChanges(ILandroid/content/res/OplusBaseConfiguration;Landroid/content/Context;Landroid/os/Handler;)V
     .locals 1
     .param p0, "i"    # I
-    .param p1, "configuration"    # Landroid/content/res/Configuration;
+    .param p1, "configuration"    # Landroid/content/res/OplusBaseConfiguration;
     .param p2, "context"    # Landroid/content/Context;
     .param p3, "handler"    # Landroid/os/Handler;
 

@@ -47,11 +47,11 @@
 
 
 # virtual methods
-.method public blacklist handleStateCheck(Ljava/lang/String;Landroid/content/res/Configuration;Landroid/content/res/Configuration;)Z
+.method public blacklist handleStateCheck(Ljava/lang/String;Landroid/content/res/OplusBaseConfiguration;Landroid/content/res/OplusBaseConfiguration;)Z
     .locals 3
     .param p1, "packageName"    # Ljava/lang/String;
-    .param p2, "newConfig"    # Landroid/content/res/Configuration;
-    .param p3, "oldConfig"    # Landroid/content/res/Configuration;
+    .param p2, "newConfig"    # Landroid/content/res/OplusBaseConfiguration;
+    .param p3, "oldConfig"    # Landroid/content/res/OplusBaseConfiguration;
 
     .line 63
     const-string v0, "com.oplus.exserviceui"
@@ -78,7 +78,7 @@
 
     .line 69
     :cond_1
-    invoke-virtual {p3, p2}, Landroid/content/res/Configuration;->diff(Landroid/content/res/Configuration;)I
+    invoke-virtual {p3, p2}, Landroid/content/res/OplusBaseConfiguration;->diff(Landroid/content/res/OplusBaseConfiguration;)I
 
     move-result v2
 
@@ -94,10 +94,10 @@
     return v0
 .end method
 
-.method public blacklist hookConfigChangeForLocale(Landroid/content/Context;Landroid/content/res/Configuration;)V
+.method public blacklist hookConfigChangeForLocale(Landroid/content/Context;Landroid/content/res/OplusBaseConfiguration;)V
     .locals 10
     .param p1, "appCxt"    # Landroid/content/Context;
-    .param p2, "config"    # Landroid/content/res/Configuration;
+    .param p2, "config"    # Landroid/content/res/OplusBaseConfiguration;
 
     .line 80
     const/4 v0, 0x0
@@ -147,12 +147,12 @@
 
     move-result-object v1
 
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v1
 
     .line 88
-    .local v1, "appConfig":Landroid/content/res/Configuration;
+    .local v1, "appConfig":Landroid/content/res/OplusBaseConfiguration;
     if-eqz v1, :cond_9
 
     if-nez v0, :cond_2
@@ -161,7 +161,7 @@
 
     .line 91
     :cond_2
-    invoke-virtual {v1, p2}, Landroid/content/res/Configuration;->diffPublicOnly(Landroid/content/res/Configuration;)I
+    invoke-virtual {v1, p2}, Landroid/content/res/OplusBaseConfiguration;->diffPublicOnly(Landroid/content/res/OplusBaseConfiguration;)I
 
     move-result v2
 
@@ -307,7 +307,7 @@
 
     move-result-object v6
 
-    invoke-virtual {v6, p2, v7, v7}, Landroid/content/res/Resources;->updateConfiguration(Landroid/content/res/Configuration;Landroid/util/DisplayMetrics;Landroid/content/res/CompatibilityInfo;)V
+    invoke-virtual {v6, p2, v7, v7}, Landroid/content/res/Resources;->updateConfiguration(Landroid/content/res/OplusBaseConfiguration;Landroid/util/DisplayMetrics;Landroid/content/res/CompatibilityInfo;)V
 
     .line 109
     :cond_7
@@ -328,12 +328,12 @@
     return-void
 .end method
 
-.method public blacklist hookHandleConfigurationChanged(Landroid/app/Application;Landroid/content/res/Configuration;ILandroid/content/res/Configuration;)Z
+.method public blacklist hookHandleConfigurationChanged(Landroid/app/Application;Landroid/content/res/OplusBaseConfiguration;ILandroid/content/res/OplusBaseConfiguration;)Z
     .locals 3
     .param p1, "application"    # Landroid/app/Application;
-    .param p2, "config"    # Landroid/content/res/Configuration;
+    .param p2, "config"    # Landroid/content/res/OplusBaseConfiguration;
     .param p3, "diff"    # I
-    .param p4, "configuration"    # Landroid/content/res/Configuration;
+    .param p4, "configuration"    # Landroid/content/res/OplusBaseConfiguration;
 
     .line 55
     sget-object v0, Landroid/app/IOplusCommonInjector;->DEFAULT:Landroid/app/IOplusCommonInjector;
@@ -348,7 +348,7 @@
 
     check-cast v0, Landroid/app/IOplusCommonInjector;
 
-    invoke-interface {v0, p1, p2}, Landroid/app/IOplusCommonInjector;->onConfigurationChangedForApplication(Landroid/app/Application;Landroid/content/res/Configuration;)V
+    invoke-interface {v0, p1, p2}, Landroid/app/IOplusCommonInjector;->onConfigurationChangedForApplication(Landroid/app/Application;Landroid/content/res/OplusBaseConfiguration;)V
 
     .line 56
     sget-object v0, Lcom/oplus/darkmode/IOplusDarkModeManager;->DEFAULT:Lcom/oplus/darkmode/IOplusDarkModeManager;
@@ -361,7 +361,7 @@
 
     check-cast v0, Lcom/oplus/darkmode/IOplusDarkModeManager;
 
-    invoke-interface {v0, p3, p4}, Lcom/oplus/darkmode/IOplusDarkModeManager;->shouldInterceptConfigRelaunch(ILandroid/content/res/Configuration;)Z
+    invoke-interface {v0, p3, p4}, Lcom/oplus/darkmode/IOplusDarkModeManager;->shouldInterceptConfigRelaunch(ILandroid/content/res/OplusBaseConfiguration;)Z
 
     move-result v0
 

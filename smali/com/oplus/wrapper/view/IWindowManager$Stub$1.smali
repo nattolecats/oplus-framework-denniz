@@ -79,7 +79,7 @@
     return-void
 .end method
 
-.method public blacklist attachToDisplayContent(Landroid/os/IBinder;I)Landroid/content/res/Configuration;
+.method public blacklist attachToDisplayContent(Landroid/os/IBinder;I)Landroid/content/res/OplusBaseConfiguration;
     .locals 1
     .param p1, "iBinder"    # Landroid/os/IBinder;
     .param p2, "i"    # I
@@ -95,7 +95,7 @@
     return-object v0
 .end method
 
-.method public blacklist attachWindowContextToDisplayArea(Landroid/os/IBinder;IILandroid/os/Bundle;)Landroid/content/res/Configuration;
+.method public blacklist attachWindowContextToDisplayArea(Landroid/os/IBinder;IILandroid/os/Bundle;)Landroid/content/res/OplusBaseConfiguration;
     .locals 1
     .param p1, "iBinder"    # Landroid/os/IBinder;
     .param p2, "i"    # I

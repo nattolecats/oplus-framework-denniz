@@ -706,10 +706,10 @@
     return-void
 .end method
 
-.method public blacklist setConfiguration(ZLandroid/content/res/Configuration;ZZ)V
+.method public blacklist setConfiguration(ZLandroid/content/res/OplusBaseConfiguration;ZZ)V
     .locals 3
     .param p1, "isMainScreen"    # Z
-    .param p2, "config"    # Landroid/content/res/Configuration;
+    .param p2, "config"    # Landroid/content/res/OplusBaseConfiguration;
     .param p3, "isInMultiWindowMode"    # Z
     .param p4, "enforceTransparency"    # Z
 
@@ -749,7 +749,7 @@
     .line 161
     if-eqz p1, :cond_2
 
-    iget v1, p2, Landroid/content/res/Configuration;->orientation:I
+    iget v1, p2, Landroid/content/res/OplusBaseConfiguration;->orientation:I
 
     const/4 v2, 0x1
 
@@ -780,7 +780,7 @@
     if-eqz v1, :cond_4
 
     .line 167
-    iget v1, p2, Landroid/content/res/Configuration;->screenWidthDp:I
+    iget v1, p2, Landroid/content/res/OplusBaseConfiguration;->screenWidthDp:I
 
     const/16 v2, 0x280
 
@@ -798,7 +798,7 @@
     :cond_3
     iget-object v0, p0, Lcom/oplus/resolver/widget/OplusResolverDrawerLayout;->mContext:Landroid/content/Context;
 
-    invoke-static {v0, p2}, Lcom/oplus/resolver/OplusResolverUtils;->calculateResponsiveUIWidth(Landroid/content/Context;Landroid/content/res/Configuration;)I
+    invoke-static {v0, p2}, Lcom/oplus/resolver/OplusResolverUtils;->calculateResponsiveUIWidth(Landroid/content/Context;Landroid/content/res/OplusBaseConfiguration;)I
 
     move-result v0
 

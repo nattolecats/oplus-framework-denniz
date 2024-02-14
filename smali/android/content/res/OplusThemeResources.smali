@@ -299,7 +299,7 @@
 
     .line 184
     :cond_1
-    invoke-interface {p1}, Landroid/content/res/IResourcesImplExt;->getSystemConfiguration()Landroid/content/res/Configuration;
+    invoke-interface {p1}, Landroid/content/res/IResourcesImplExt;->getSystemConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v2
 
@@ -312,7 +312,7 @@
     .line 182
     :cond_2
     :goto_0
-    invoke-interface {p1}, Landroid/content/res/IResourcesImplExt;->getConfiguration()Landroid/content/res/Configuration;
+    invoke-interface {p1}, Landroid/content/res/IResourcesImplExt;->getConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v2
 
@@ -569,7 +569,7 @@
 
     .line 141
     :cond_1
-    invoke-interface {p0}, Landroid/content/res/IResourcesImplExt;->getSystemConfiguration()Landroid/content/res/Configuration;
+    invoke-interface {p0}, Landroid/content/res/IResourcesImplExt;->getSystemConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v2
 
@@ -589,7 +589,7 @@
     .line 139
     :cond_3
     :goto_0
-    invoke-interface {p0}, Landroid/content/res/IResourcesImplExt;->getConfiguration()Landroid/content/res/Configuration;
+    invoke-interface {p0}, Landroid/content/res/IResourcesImplExt;->getConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v2
 

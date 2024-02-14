@@ -210,9 +210,9 @@
     return-void
 .end method
 
-.method public blacklist setTo(Landroid/content/res/Configuration;)V
+.method public blacklist setTo(Landroid/content/res/OplusBaseConfiguration;)V
     .locals 0
-    .param p1, "configuration"    # Landroid/content/res/Configuration;
+    .param p1, "configuration"    # Landroid/content/res/OplusBaseConfiguration;
 
     .line 138
     return-void
@@ -225,9 +225,9 @@
     return-void
 .end method
 
-.method public blacklist updateFrom(Landroid/content/res/Configuration;)V
+.method public blacklist updateFrom(Landroid/content/res/OplusBaseConfiguration;)V
     .locals 0
-    .param p1, "configuration"    # Landroid/content/res/Configuration;
+    .param p1, "configuration"    # Landroid/content/res/OplusBaseConfiguration;
 
     .line 146
     return-void

@@ -206,11 +206,11 @@
     return-void
 .end method
 
-.method public blacklist interceptOplusConfigChange(Landroid/content/pm/ActivityInfo;Landroid/content/pm/IPackageManager;Landroid/content/res/Configuration;I)Z
+.method public blacklist interceptOplusConfigChange(Landroid/content/pm/ActivityInfo;Landroid/content/pm/IPackageManager;Landroid/content/res/OplusBaseConfiguration;I)Z
     .locals 1
     .param p1, "activityInfo"    # Landroid/content/pm/ActivityInfo;
     .param p2, "pm"    # Landroid/content/pm/IPackageManager;
-    .param p3, "config"    # Landroid/content/res/Configuration;
+    .param p3, "config"    # Landroid/content/res/OplusBaseConfiguration;
     .param p4, "changes"    # I
 
     .line 157

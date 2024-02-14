@@ -484,11 +484,11 @@
 
     move-result-object v2
 
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Landroid/content/res/Configuration;->isScreenWideColorGamut()Z
+    invoke-virtual {v2}, Landroid/content/res/OplusBaseConfiguration;->isScreenWideColorGamut()Z
 
     move-result v2
 

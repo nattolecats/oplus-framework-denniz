@@ -717,9 +717,9 @@
     return-object v1
 .end method
 
-.method private static blacklist doUpdateTypeface(Landroid/content/res/Configuration;)V
+.method private static blacklist doUpdateTypeface(Landroid/content/res/OplusBaseConfiguration;)V
     .locals 6
-    .param p0, "configuration"    # Landroid/content/res/Configuration;
+    .param p0, "configuration"    # Landroid/content/res/OplusBaseConfiguration;
 
     .line 648
     const/4 v0, 0x0
@@ -2398,9 +2398,9 @@
     return-void
 .end method
 
-.method public static blacklist setFlipFont(Landroid/content/res/Configuration;)V
+.method public static blacklist setFlipFont(Landroid/content/res/OplusBaseConfiguration;)V
     .locals 3
-    .param p0, "configuration"    # Landroid/content/res/Configuration;
+    .param p0, "configuration"    # Landroid/content/res/OplusBaseConfiguration;
 
     .line 76
     const-class v0, Landroid/content/res/OplusBaseConfiguration;
@@ -2489,16 +2489,16 @@
     invoke-static {v1}, Lcom/oplus/util/OplusFontUtils;->checkAndCorrectFlipFontLink(Z)V
 
     .line 84
-    invoke-static {p0}, Lcom/oplus/util/OplusFontUtils;->doUpdateTypeface(Landroid/content/res/Configuration;)V
+    invoke-static {p0}, Lcom/oplus/util/OplusFontUtils;->doUpdateTypeface(Landroid/content/res/OplusBaseConfiguration;)V
 
     .line 86
     :cond_0
     return-void
 .end method
 
-.method public static blacklist setFlipFontWhenUserChange(Landroid/content/res/Configuration;)V
+.method public static blacklist setFlipFontWhenUserChange(Landroid/content/res/OplusBaseConfiguration;)V
     .locals 4
-    .param p0, "configuration"    # Landroid/content/res/Configuration;
+    .param p0, "configuration"    # Landroid/content/res/OplusBaseConfiguration;
 
     .line 102
     const-class v0, Landroid/content/res/OplusBaseConfiguration;
@@ -2574,7 +2574,7 @@
     invoke-static {v2}, Lcom/oplus/util/OplusFontUtils;->checkAndCorrectFlipFontLink(Z)V
 
     .line 113
-    invoke-static {p0}, Lcom/oplus/util/OplusFontUtils;->doUpdateTypeface(Landroid/content/res/Configuration;)V
+    invoke-static {p0}, Lcom/oplus/util/OplusFontUtils;->doUpdateTypeface(Landroid/content/res/OplusBaseConfiguration;)V
 
     .line 115
     .end local v1    # "currentUserId":I
@@ -2687,14 +2687,14 @@
     return v0
 .end method
 
-.method public static blacklist updateConfigurationInUIMode(Landroid/content/Context;Landroid/content/res/Configuration;I)V
+.method public static blacklist updateConfigurationInUIMode(Landroid/content/Context;Landroid/content/res/OplusBaseConfiguration;I)V
     .locals 9
     .param p0, "context"    # Landroid/content/Context;
-    .param p1, "config"    # Landroid/content/res/Configuration;
+    .param p1, "config"    # Landroid/content/res/OplusBaseConfiguration;
     .param p2, "userId"    # I
 
     .line 575
-    iget v0, p1, Landroid/content/res/Configuration;->uiMode:I
+    iget v0, p1, Landroid/content/res/OplusBaseConfiguration;->uiMode:I
 
     and-int/lit8 v0, v0, 0x20
 
@@ -3056,9 +3056,9 @@
     .end packed-switch
 .end method
 
-.method public static blacklist updateLanguageLocale(Landroid/content/res/Configuration;)V
+.method public static blacklist updateLanguageLocale(Landroid/content/res/OplusBaseConfiguration;)V
     .locals 1
-    .param p0, "config"    # Landroid/content/res/Configuration;
+    .param p0, "config"    # Landroid/content/res/OplusBaseConfiguration;
 
     .line 437
     invoke-static {}, Lcom/oplus/util/OplusFontUtils;->isCurrentLanguageSupportVariationFont()Z
@@ -3078,9 +3078,9 @@
     return-void
 .end method
 
-.method public static blacklist updateOSansConfig(Landroid/content/res/Configuration;I)Z
+.method public static blacklist updateOSansConfig(Landroid/content/res/OplusBaseConfiguration;I)Z
     .locals 7
-    .param p0, "config"    # Landroid/content/res/Configuration;
+    .param p0, "config"    # Landroid/content/res/OplusBaseConfiguration;
     .param p1, "changes"    # I
 
     .line 417
@@ -3105,7 +3105,7 @@
     if-eqz v0, :cond_1
 
     .line 419
-    invoke-static {p0}, Lcom/oplus/util/OplusFontUtils;->updateLanguageLocale(Landroid/content/res/Configuration;)V
+    invoke-static {p0}, Lcom/oplus/util/OplusFontUtils;->updateLanguageLocale(Landroid/content/res/OplusBaseConfiguration;)V
 
     .line 421
     :cond_1
@@ -3172,22 +3172,22 @@
     return v2
 .end method
 
-.method public static blacklist updateOpSansConfig(Landroid/content/Context;Landroid/content/res/Configuration;I)V
+.method public static blacklist updateOpSansConfig(Landroid/content/Context;Landroid/content/res/OplusBaseConfiguration;I)V
     .locals 0
     .param p0, "context"    # Landroid/content/Context;
-    .param p1, "config"    # Landroid/content/res/Configuration;
+    .param p1, "config"    # Landroid/content/res/OplusBaseConfiguration;
     .param p2, "userId"    # I
 
     .line 621
-    invoke-static {p0, p1, p2}, Lcom/oplus/util/OpSansCustomization;->updateOpSansConfig(Landroid/content/Context;Landroid/content/res/Configuration;I)V
+    invoke-static {p0, p1, p2}, Lcom/oplus/util/OpSansCustomization;->updateOpSansConfig(Landroid/content/Context;Landroid/content/res/OplusBaseConfiguration;I)V
 
     .line 622
     return-void
 .end method
 
-.method private static blacklist updateThemeStoreFontConfig(Landroid/content/res/Configuration;I)Z
+.method private static blacklist updateThemeStoreFontConfig(Landroid/content/res/OplusBaseConfiguration;I)Z
     .locals 4
-    .param p0, "configuration"    # Landroid/content/res/Configuration;
+    .param p0, "configuration"    # Landroid/content/res/OplusBaseConfiguration;
     .param p1, "changes"    # I
 
     .line 141
@@ -3263,7 +3263,7 @@
     sput v1, Lcom/oplus/util/OplusFontUtils;->sUserId:I
 
     .line 158
-    invoke-static {p0}, Lcom/oplus/util/OplusFontUtils;->doUpdateTypeface(Landroid/content/res/Configuration;)V
+    invoke-static {p0}, Lcom/oplus/util/OplusFontUtils;->doUpdateTypeface(Landroid/content/res/OplusBaseConfiguration;)V
 
     .line 159
     new-instance v1, Ljava/lang/StringBuilder;
@@ -3352,9 +3352,9 @@
     return v1
 .end method
 
-.method public static blacklist updateTypefaceInCurrProcess(Landroid/content/res/Configuration;I)V
+.method public static blacklist updateTypefaceInCurrProcess(Landroid/content/res/OplusBaseConfiguration;I)V
     .locals 3
-    .param p0, "configuration"    # Landroid/content/res/Configuration;
+    .param p0, "configuration"    # Landroid/content/res/OplusBaseConfiguration;
     .param p1, "changes"    # I
 
     .line 122
@@ -3362,19 +3362,19 @@
 
     .line 124
     .local v0, "changed":Z
-    invoke-static {p0, p1}, Lcom/oplus/util/OplusFontUtils;->updateThemeStoreFontConfig(Landroid/content/res/Configuration;I)Z
+    invoke-static {p0, p1}, Lcom/oplus/util/OplusFontUtils;->updateThemeStoreFontConfig(Landroid/content/res/OplusBaseConfiguration;I)Z
 
     move-result v0
 
     .line 126
-    invoke-static {p0, p1}, Lcom/oplus/util/OplusFontUtils;->updateOSansConfig(Landroid/content/res/Configuration;I)Z
+    invoke-static {p0, p1}, Lcom/oplus/util/OplusFontUtils;->updateOSansConfig(Landroid/content/res/OplusBaseConfiguration;I)Z
 
     move-result v1
 
     or-int/2addr v0, v1
 
     .line 128
-    invoke-static {p0, p1}, Lcom/oplus/util/OpSansCustomization;->applyNewOpSansConfig(Landroid/content/res/Configuration;I)Z
+    invoke-static {p0, p1}, Lcom/oplus/util/OpSansCustomization;->applyNewOpSansConfig(Landroid/content/res/OplusBaseConfiguration;I)Z
 
     move-result v1
 

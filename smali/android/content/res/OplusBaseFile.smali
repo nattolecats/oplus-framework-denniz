@@ -580,7 +580,7 @@
     const/4 v2, 0x0
 
     .line 171
-    .local v2, "configuration":Landroid/content/res/Configuration;
+    .local v2, "configuration":Landroid/content/res/OplusBaseConfiguration;
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v3
@@ -607,7 +607,7 @@
 
     .line 174
     :cond_0
-    invoke-interface {p0}, Landroid/content/res/IResourcesImplExt;->getSystemConfiguration()Landroid/content/res/Configuration;
+    invoke-interface {p0}, Landroid/content/res/IResourcesImplExt;->getSystemConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v2
 
@@ -616,7 +616,7 @@
     .line 172
     :cond_1
     :goto_0
-    invoke-interface {p0}, Landroid/content/res/IResourcesImplExt;->getConfiguration()Landroid/content/res/Configuration;
+    invoke-interface {p0}, Landroid/content/res/IResourcesImplExt;->getConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v2
 
@@ -629,13 +629,13 @@
 
     .line 180
     :cond_2
-    invoke-virtual {v2}, Landroid/content/res/Configuration;->isNightModeActive()Z
+    invoke-virtual {v2}, Landroid/content/res/OplusBaseConfiguration;->isNightModeActive()Z
 
     move-result v3
 
     if-nez v3, :cond_3
 
-    iget v3, v2, Landroid/content/res/Configuration;->uiMode:I
+    iget v3, v2, Landroid/content/res/OplusBaseConfiguration;->uiMode:I
 
     const/16 v4, 0x30
 
@@ -2327,11 +2327,11 @@
     :try_start_0
     iget-object v2, p0, Landroid/content/res/OplusBaseFile;->mBaseResources:Landroid/content/res/IResourcesImplExt;
 
-    invoke-interface {v2}, Landroid/content/res/IResourcesImplExt;->getSystemConfiguration()Landroid/content/res/Configuration;
+    invoke-interface {v2}, Landroid/content/res/IResourcesImplExt;->getSystemConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Landroid/content/res/Configuration;->getOplusExtraConfiguration()Loplus/content/res/OplusExtraConfiguration;
+    invoke-virtual {v2}, Landroid/content/res/OplusBaseConfiguration;->getOplusExtraConfiguration()Loplus/content/res/OplusExtraConfiguration;
 
     move-result-object v2
 

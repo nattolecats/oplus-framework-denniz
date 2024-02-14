@@ -98,11 +98,11 @@
 
     move-result-object v1
 
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v1
 
-    iget v1, v1, Landroid/content/res/Configuration;->fontScale:F
+    iget v1, v1, Landroid/content/res/OplusBaseConfiguration;->fontScale:F
 
     .line 428
     .local v1, "fontScale":F
@@ -645,14 +645,14 @@
     return-void
 .end method
 
-.method public blacklist hookonConfigurationChanged(Landroid/content/res/Configuration;)V
+.method public blacklist hookonConfigurationChanged(Landroid/content/res/OplusBaseConfiguration;)V
     .locals 1
-    .param p1, "newConfig"    # Landroid/content/res/Configuration;
+    .param p1, "newConfig"    # Landroid/content/res/OplusBaseConfiguration;
 
     .line 149
     iget-object v0, p0, Lcom/android/internal/app/ResolverActivityExtImpl;->mResolverManager:Lcom/android/internal/app/IOplusResolverManager;
 
-    invoke-interface {v0, p1}, Lcom/android/internal/app/IOplusResolverManager;->onConfigurationChanged(Landroid/content/res/Configuration;)V
+    invoke-interface {v0, p1}, Lcom/android/internal/app/IOplusResolverManager;->onConfigurationChanged(Landroid/content/res/OplusBaseConfiguration;)V
 
     .line 150
     return-void
@@ -755,10 +755,10 @@
     return v0
 .end method
 
-.method public blacklist hookonMultiWindowModeChanged(ZLandroid/content/res/Configuration;)V
+.method public blacklist hookonMultiWindowModeChanged(ZLandroid/content/res/OplusBaseConfiguration;)V
     .locals 1
     .param p1, "isInMultiWindowMode"    # Z
-    .param p2, "newConfig"    # Landroid/content/res/Configuration;
+    .param p2, "newConfig"    # Landroid/content/res/OplusBaseConfiguration;
 
     .line 143
     iget-object v0, p0, Lcom/android/internal/app/ResolverActivityExtImpl;->mResolverManager:Lcom/android/internal/app/IOplusResolverManager;
@@ -1144,11 +1144,11 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v0
 
-    iget v0, v0, Landroid/content/res/Configuration;->uiMode:I
+    iget v0, v0, Landroid/content/res/OplusBaseConfiguration;->uiMode:I
 
     and-int/lit8 v0, v0, 0x30
 

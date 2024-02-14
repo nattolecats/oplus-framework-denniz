@@ -293,12 +293,12 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v0
 
     .line 687
-    .local v0, "cfg":Landroid/content/res/Configuration;
+    .local v0, "cfg":Landroid/content/res/OplusBaseConfiguration;
     iget-object v2, p0, Lcom/oplus/widget/OplusGridView$8;->this$0:Lcom/oplus/widget/OplusGridView;
 
     const/4 v3, 0x0
@@ -306,7 +306,7 @@
     invoke-static {v2, v3}, Lcom/oplus/widget/OplusGridView;->-$$Nest$fputisSelected(Lcom/oplus/widget/OplusGridView;Z)V
 
     .line 688
-    iget v2, v0, Landroid/content/res/Configuration;->orientation:I
+    iget v2, v0, Landroid/content/res/OplusBaseConfiguration;->orientation:I
 
     const/4 v3, 0x2
 
@@ -383,7 +383,7 @@
 
     .line 693
     :cond_1
-    iget v2, v0, Landroid/content/res/Configuration;->orientation:I
+    iget v2, v0, Landroid/content/res/OplusBaseConfiguration;->orientation:I
 
     if-ne v2, v1, :cond_2
 
@@ -434,7 +434,7 @@
     iput v2, p0, Lcom/oplus/widget/OplusGridView$8;->position:I
 
     .line 701
-    .end local v0    # "cfg":Landroid/content/res/Configuration;
+    .end local v0    # "cfg":Landroid/content/res/OplusBaseConfiguration;
     :cond_2
     :goto_0
     iget-object v0, p0, Lcom/oplus/widget/OplusGridView$8;->this$0:Lcom/oplus/widget/OplusGridView;

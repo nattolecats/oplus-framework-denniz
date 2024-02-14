@@ -33,9 +33,9 @@
     return-void
 .end method
 
-.method public blacklist onConfigurationChanged(Landroid/content/res/Configuration;Landroid/content/Context;)V
+.method public blacklist onConfigurationChanged(Landroid/content/res/OplusBaseConfiguration;Landroid/content/Context;)V
     .locals 0
-    .param p1, "newConfig"    # Landroid/content/res/Configuration;
+    .param p1, "newConfig"    # Landroid/content/res/OplusBaseConfiguration;
     .param p2, "context"    # Landroid/content/Context;
 
     .line 30

@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field private blacklist mConfiguration:Landroid/content/res/Configuration;
+.field private blacklist mConfiguration:Landroid/content/res/OplusBaseConfiguration;
 
 
 # direct methods
@@ -21,9 +21,9 @@
     .line 29
     move-object v0, p1
 
-    check-cast v0, Landroid/content/res/Configuration;
+    check-cast v0, Landroid/content/res/OplusBaseConfiguration;
 
-    iput-object v0, p0, Landroid/content/res/ConfigurationExtImpl;->mConfiguration:Landroid/content/res/Configuration;
+    iput-object v0, p0, Landroid/content/res/ConfigurationExtImpl;->mConfiguration:Landroid/content/res/OplusBaseConfiguration;
 
     .line 30
     return-void
@@ -50,31 +50,31 @@
 
 
 # virtual methods
-.method public blacklist hookSetTo(Landroid/content/res/Configuration;)V
+.method public blacklist hookSetTo(Landroid/content/res/OplusBaseConfiguration;)V
     .locals 1
-    .param p1, "configuration"    # Landroid/content/res/Configuration;
+    .param p1, "configuration"    # Landroid/content/res/OplusBaseConfiguration;
 
     .line 36
     invoke-direct {p0}, Landroid/content/res/ConfigurationExtImpl;->getAutoLayoutManager()Landroid/view/autolayout/IOplusAutoLayoutManager;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Landroid/view/autolayout/IOplusAutoLayoutManager;->setTo(Landroid/content/res/Configuration;)V
+    invoke-interface {v0, p1}, Landroid/view/autolayout/IOplusAutoLayoutManager;->setTo(Landroid/content/res/OplusBaseConfiguration;)V
 
     .line 37
     return-void
 .end method
 
-.method public blacklist hookUpdateFrom(Landroid/content/res/Configuration;)V
+.method public blacklist hookUpdateFrom(Landroid/content/res/OplusBaseConfiguration;)V
     .locals 1
-    .param p1, "configuration"    # Landroid/content/res/Configuration;
+    .param p1, "configuration"    # Landroid/content/res/OplusBaseConfiguration;
 
     .line 41
     invoke-direct {p0}, Landroid/content/res/ConfigurationExtImpl;->getAutoLayoutManager()Landroid/view/autolayout/IOplusAutoLayoutManager;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Landroid/view/autolayout/IOplusAutoLayoutManager;->updateFrom(Landroid/content/res/Configuration;)V
+    invoke-interface {v0, p1}, Landroid/view/autolayout/IOplusAutoLayoutManager;->updateFrom(Landroid/content/res/OplusBaseConfiguration;)V
 
     .line 42
     return-void

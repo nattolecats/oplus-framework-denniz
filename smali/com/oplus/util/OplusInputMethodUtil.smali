@@ -1074,11 +1074,11 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v0
 
-    iget v0, v0, Landroid/content/res/Configuration;->orientation:I
+    iget v0, v0, Landroid/content/res/OplusBaseConfiguration;->orientation:I
 
     const/4 v1, 0x0
 

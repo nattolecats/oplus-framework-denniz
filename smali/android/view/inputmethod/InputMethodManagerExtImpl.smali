@@ -669,9 +669,9 @@
     return-void
 .end method
 
-.method public blacklist onConfigurationChanged(Landroid/content/res/Configuration;)V
+.method public blacklist onConfigurationChanged(Landroid/content/res/OplusBaseConfiguration;)V
     .locals 3
-    .param p1, "globalConfig"    # Landroid/content/res/Configuration;
+    .param p1, "globalConfig"    # Landroid/content/res/OplusBaseConfiguration;
 
     .line 176
     iget-object v0, p0, Landroid/view/inputmethod/InputMethodManagerExtImpl;->mCurRootView:Landroid/view/ViewRootImpl;
@@ -681,7 +681,7 @@
     if-eqz p1, :cond_0
 
     .line 177
-    iget-object v0, p1, Landroid/content/res/Configuration;->windowConfiguration:Landroid/app/WindowConfiguration;
+    iget-object v0, p1, Landroid/content/res/OplusBaseConfiguration;->windowConfiguration:Landroid/app/WindowConfiguration;
 
     invoke-virtual {v0}, Landroid/app/WindowConfiguration;->getWindowingMode()I
 
@@ -840,11 +840,11 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v0
 
-    iget-object v0, v0, Landroid/content/res/Configuration;->windowConfiguration:Landroid/app/WindowConfiguration;
+    iget-object v0, v0, Landroid/content/res/OplusBaseConfiguration;->windowConfiguration:Landroid/app/WindowConfiguration;
 
     .line 147
     invoke-virtual {v0}, Landroid/app/WindowConfiguration;->getWindowingMode()I

@@ -119,18 +119,18 @@
     return-void
 .end method
 
-.method public blacklist setFlipFont(Landroid/content/res/Configuration;I)V
+.method public blacklist setFlipFont(Landroid/content/res/OplusBaseConfiguration;I)V
     .locals 0
-    .param p1, "config"    # Landroid/content/res/Configuration;
+    .param p1, "config"    # Landroid/content/res/OplusBaseConfiguration;
     .param p2, "changes"    # I
 
     .line 61
     return-void
 .end method
 
-.method public whitelist setFlipFontWhenUserChange(Landroid/content/res/Configuration;I)V
+.method public whitelist setFlipFontWhenUserChange(Landroid/content/res/OplusBaseConfiguration;I)V
     .locals 0
-    .param p1, "config"    # Landroid/content/res/Configuration;
+    .param p1, "config"    # Landroid/content/res/OplusBaseConfiguration;
     .param p2, "changes"    # I
 
     .line 64
@@ -145,37 +145,37 @@
     return-void
 .end method
 
-.method public whitelist updateConfigurationInUIMode(Landroid/content/Context;Landroid/content/res/Configuration;I)V
+.method public whitelist updateConfigurationInUIMode(Landroid/content/Context;Landroid/content/res/OplusBaseConfiguration;I)V
     .locals 0
     .param p1, "context"    # Landroid/content/Context;
-    .param p2, "config"    # Landroid/content/res/Configuration;
+    .param p2, "config"    # Landroid/content/res/OplusBaseConfiguration;
     .param p3, "userId"    # I
 
     .line 86
     return-void
 .end method
 
-.method public whitelist updateLanguageLocale(Landroid/content/res/Configuration;)V
+.method public whitelist updateLanguageLocale(Landroid/content/res/OplusBaseConfiguration;)V
     .locals 0
-    .param p1, "config"    # Landroid/content/res/Configuration;
+    .param p1, "config"    # Landroid/content/res/OplusBaseConfiguration;
 
     .line 82
     return-void
 .end method
 
-.method public whitelist updateOpSansConfig(Landroid/content/Context;Landroid/content/res/Configuration;I)V
+.method public whitelist updateOpSansConfig(Landroid/content/Context;Landroid/content/res/OplusBaseConfiguration;I)V
     .locals 0
     .param p1, "context"    # Landroid/content/Context;
-    .param p2, "config"    # Landroid/content/res/Configuration;
+    .param p2, "config"    # Landroid/content/res/OplusBaseConfiguration;
     .param p3, "userId"    # I
 
     .line 100
     return-void
 .end method
 
-.method public whitelist updateTypefaceInCurrProcess(Landroid/content/res/Configuration;I)V
+.method public whitelist updateTypefaceInCurrProcess(Landroid/content/res/OplusBaseConfiguration;I)V
     .locals 0
-    .param p1, "config"    # Landroid/content/res/Configuration;
+    .param p1, "config"    # Landroid/content/res/OplusBaseConfiguration;
     .param p2, "changes"    # I
 
     .line 71

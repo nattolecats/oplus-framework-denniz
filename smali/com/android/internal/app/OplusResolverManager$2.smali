@@ -47,9 +47,9 @@
     return-void
 .end method
 
-.method public whitelist onConfigurationChanged(Landroid/content/res/Configuration;)V
+.method public whitelist onConfigurationChanged(Landroid/content/res/OplusBaseConfiguration;)V
     .locals 2
-    .param p1, "configuration"    # Landroid/content/res/Configuration;
+    .param p1, "configuration"    # Landroid/content/res/OplusBaseConfiguration;
 
     .line 918
     iget-object v0, p0, Lcom/android/internal/app/OplusResolverManager$2;->this$0:Lcom/android/internal/app/OplusResolverManager;

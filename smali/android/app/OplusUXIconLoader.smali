@@ -593,11 +593,11 @@
     iput-object v4, p0, Landroid/app/OplusUXIconLoader;->mDarkModeColorFilter:Landroid/graphics/LightingColorFilter;
 
     .line 789
-    invoke-virtual {p1}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+    invoke-virtual {p1}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v4
 
-    iget v4, v4, Landroid/content/res/Configuration;->uiMode:I
+    iget v4, v4, Landroid/content/res/OplusBaseConfiguration;->uiMode:I
 
     and-int/lit8 v4, v4, 0x30
 
@@ -774,11 +774,11 @@
     if-eqz v0, :cond_5
 
     .line 811
-    invoke-virtual {p1}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+    invoke-virtual {p1}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v0
 
-    iget v0, v0, Landroid/content/res/Configuration;->uiMode:I
+    iget v0, v0, Landroid/content/res/OplusBaseConfiguration;->uiMode:I
 
     and-int/lit8 v0, v0, 0x30
 
@@ -5737,7 +5737,7 @@
 
     .line 224
     :cond_1
-    invoke-interface {p2}, Landroid/content/res/IResourcesExt;->getSystemConfiguration()Landroid/content/res/Configuration;
+    invoke-interface {p2}, Landroid/content/res/IResourcesExt;->getSystemConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v0
 
@@ -6271,14 +6271,14 @@
 
     if-eqz v1, :cond_7
 
-    invoke-interface {v0}, Landroid/content/res/IResourcesExt;->getConfiguration()Landroid/content/res/Configuration;
+    invoke-interface {v0}, Landroid/content/res/IResourcesExt;->getConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v1
 
     if-eqz v1, :cond_7
 
     .line 323
-    invoke-interface {v0}, Landroid/content/res/IResourcesExt;->getConfiguration()Landroid/content/res/Configuration;
+    invoke-interface {v0}, Landroid/content/res/IResourcesExt;->getConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v1
 
@@ -6292,14 +6292,14 @@
     .line 324
     .end local v1    # "extraConfig":Loplus/content/res/OplusExtraConfiguration;
     :cond_7
-    invoke-interface {v0}, Landroid/content/res/IResourcesExt;->getSystemConfiguration()Landroid/content/res/Configuration;
+    invoke-interface {v0}, Landroid/content/res/IResourcesExt;->getSystemConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v1
 
     if-eqz v1, :cond_13
 
     .line 325
-    invoke-interface {v0}, Landroid/content/res/IResourcesExt;->getSystemConfiguration()Landroid/content/res/Configuration;
+    invoke-interface {v0}, Landroid/content/res/IResourcesExt;->getSystemConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v1
 

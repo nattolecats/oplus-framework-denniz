@@ -292,7 +292,7 @@
     :cond_0
     iget-object v0, p0, Landroid/content/res/OplusAccessibleFile;->mBaseResources:Landroid/content/res/IResourcesImplExt;
 
-    invoke-interface {v0}, Landroid/content/res/IResourcesImplExt;->getSystemConfiguration()Landroid/content/res/Configuration;
+    invoke-interface {v0}, Landroid/content/res/IResourcesImplExt;->getSystemConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v0
 

@@ -1188,13 +1188,13 @@
     return-object v0
 .end method
 
-.method public blacklist getConfiguration()Landroid/content/res/Configuration;
+.method public blacklist getConfiguration()Landroid/content/res/OplusBaseConfiguration;
     .locals 1
 
     .line 554
     iget-object v0, p0, Landroid/content/res/ResourcesImplExt;->mResourcesImpl:Landroid/content/res/ResourcesImpl;
 
-    invoke-virtual {v0}, Landroid/content/res/ResourcesImpl;->getConfiguration()Landroid/content/res/Configuration;
+    invoke-virtual {v0}, Landroid/content/res/ResourcesImpl;->getConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v0
 
@@ -1395,7 +1395,7 @@
     return-object v0
 .end method
 
-.method public blacklist getSystemConfiguration()Landroid/content/res/Configuration;
+.method public blacklist getSystemConfiguration()Landroid/content/res/OplusBaseConfiguration;
     .locals 1
 
     .line 558
@@ -1403,7 +1403,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v0
 
@@ -2693,10 +2693,10 @@
     return-void
 .end method
 
-.method public blacklist updateCompactWindowAdjustments(Landroid/content/res/Configuration;Landroid/content/res/Configuration;)V
+.method public blacklist updateCompactWindowAdjustments(Landroid/content/res/OplusBaseConfiguration;Landroid/content/res/OplusBaseConfiguration;)V
     .locals 2
-    .param p1, "oldOverrideConfig"    # Landroid/content/res/Configuration;
-    .param p2, "newOverrideConfig"    # Landroid/content/res/Configuration;
+    .param p1, "oldOverrideConfig"    # Landroid/content/res/OplusBaseConfiguration;
+    .param p2, "newOverrideConfig"    # Landroid/content/res/OplusBaseConfiguration;
 
     .line 578
     iget-object v0, p0, Landroid/content/res/ResourcesImplExt;->mCompactWindowAdjustments:Landroid/view/DisplayAdjustments;
@@ -2707,7 +2707,7 @@
 
     if-eqz p2, :cond_0
 
-    iget-object v0, p2, Landroid/content/res/Configuration;->windowConfiguration:Landroid/app/WindowConfiguration;
+    iget-object v0, p2, Landroid/content/res/OplusBaseConfiguration;->windowConfiguration:Landroid/app/WindowConfiguration;
 
     .line 579
     invoke-virtual {v0}, Landroid/app/WindowConfiguration;->getWindowingMode()I
@@ -2718,7 +2718,7 @@
 
     .line 580
     :cond_0
-    invoke-static {p2}, Landroid/app/ResourcesManagerExtImpl;->inOplusCompatMode(Landroid/content/res/Configuration;)Z
+    invoke-static {p2}, Landroid/app/ResourcesManagerExtImpl;->inOplusCompatMode(Landroid/content/res/OplusBaseConfiguration;)Z
 
     move-result v0
 
@@ -2728,7 +2728,7 @@
     :cond_1
     new-instance v0, Landroid/view/DisplayAdjustments;
 
-    invoke-direct {v0, p2}, Landroid/view/DisplayAdjustments;-><init>(Landroid/content/res/Configuration;)V
+    invoke-direct {v0, p2}, Landroid/view/DisplayAdjustments;-><init>(Landroid/content/res/OplusBaseConfiguration;)V
 
     iput-object v0, p0, Landroid/content/res/ResourcesImplExt;->mCompactWindowAdjustments:Landroid/view/DisplayAdjustments;
 
@@ -2742,7 +2742,7 @@
 
     if-eqz p2, :cond_3
 
-    iget-object v0, p2, Landroid/content/res/Configuration;->windowConfiguration:Landroid/app/WindowConfiguration;
+    iget-object v0, p2, Landroid/content/res/OplusBaseConfiguration;->windowConfiguration:Landroid/app/WindowConfiguration;
 
     .line 587
     invoke-virtual {v0}, Landroid/app/WindowConfiguration;->getWindowingMode()I
@@ -2752,7 +2752,7 @@
     if-ne v0, v1, :cond_3
 
     .line 588
-    invoke-static {p2}, Landroid/app/ResourcesManagerExtImpl;->inOplusCompatMode(Landroid/content/res/Configuration;)Z
+    invoke-static {p2}, Landroid/app/ResourcesManagerExtImpl;->inOplusCompatMode(Landroid/content/res/OplusBaseConfiguration;)Z
 
     move-result v0
 
@@ -2776,7 +2776,7 @@
 
     if-eqz v0, :cond_5
 
-    iget-object v0, p2, Landroid/content/res/Configuration;->windowConfiguration:Landroid/app/WindowConfiguration;
+    iget-object v0, p2, Landroid/content/res/OplusBaseConfiguration;->windowConfiguration:Landroid/app/WindowConfiguration;
 
     .line 594
     invoke-virtual {v0}, Landroid/app/WindowConfiguration;->getWindowingMode()I
@@ -2787,7 +2787,7 @@
 
     .line 595
     :cond_5
-    invoke-static {p2}, Landroid/app/ResourcesManagerExtImpl;->inOplusCompatMode(Landroid/content/res/Configuration;)Z
+    invoke-static {p2}, Landroid/app/ResourcesManagerExtImpl;->inOplusCompatMode(Landroid/content/res/OplusBaseConfiguration;)Z
 
     move-result v0
 
@@ -2797,7 +2797,7 @@
     :cond_6
     iget-object v0, p0, Landroid/content/res/ResourcesImplExt;->mCompactWindowAdjustments:Landroid/view/DisplayAdjustments;
 
-    invoke-virtual {v0, p2}, Landroid/view/DisplayAdjustments;->setConfiguration(Landroid/content/res/Configuration;)V
+    invoke-virtual {v0, p2}, Landroid/view/DisplayAdjustments;->setConfiguration(Landroid/content/res/OplusBaseConfiguration;)V
 
     .line 601
     :cond_7
@@ -2805,10 +2805,10 @@
     return-void
 .end method
 
-.method public blacklist updateExConfiguration(Landroid/content/res/ResourcesImpl;Landroid/content/res/Configuration;)I
+.method public blacklist updateExConfiguration(Landroid/content/res/ResourcesImpl;Landroid/content/res/OplusBaseConfiguration;)I
     .locals 2
     .param p1, "resources"    # Landroid/content/res/ResourcesImpl;
-    .param p2, "config"    # Landroid/content/res/Configuration;
+    .param p2, "config"    # Landroid/content/res/OplusBaseConfiguration;
 
     .line 350
     const/4 v0, 0x0
@@ -2818,23 +2818,23 @@
     if-eqz p1, :cond_0
 
     .line 352
-    invoke-virtual {p1}, Landroid/content/res/ResourcesImpl;->getConfiguration()Landroid/content/res/Configuration;
+    invoke-virtual {p1}, Landroid/content/res/ResourcesImpl;->getConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v1
 
     .line 353
-    .local v1, "oldConfig":Landroid/content/res/Configuration;
+    .local v1, "oldConfig":Landroid/content/res/OplusBaseConfiguration;
     if-eqz v1, :cond_0
 
     if-eqz p2, :cond_0
 
     .line 354
-    invoke-virtual {v1, p2}, Landroid/content/res/Configuration;->diff(Landroid/content/res/Configuration;)I
+    invoke-virtual {v1, p2}, Landroid/content/res/OplusBaseConfiguration;->diff(Landroid/content/res/OplusBaseConfiguration;)I
 
     move-result v0
 
     .line 357
-    .end local v1    # "oldConfig":Landroid/content/res/Configuration;
+    .end local v1    # "oldConfig":Landroid/content/res/OplusBaseConfiguration;
     :cond_0
     return v0
 .end method

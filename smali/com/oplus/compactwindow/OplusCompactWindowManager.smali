@@ -1279,10 +1279,10 @@
     return v0
 .end method
 
-.method public blacklist shouldSendConfigration(Landroid/content/res/Configuration;Landroid/content/res/Configuration;Landroid/os/IBinder;)Z
+.method public blacklist shouldSendConfigration(Landroid/content/res/OplusBaseConfiguration;Landroid/content/res/OplusBaseConfiguration;Landroid/os/IBinder;)Z
     .locals 5
-    .param p1, "current"    # Landroid/content/res/Configuration;
-    .param p2, "newconfig"    # Landroid/content/res/Configuration;
+    .param p1, "current"    # Landroid/content/res/OplusBaseConfiguration;
+    .param p2, "newconfig"    # Landroid/content/res/OplusBaseConfiguration;
     .param p3, "token"    # Landroid/os/IBinder;
 
     .line 515
@@ -1304,7 +1304,7 @@
     if-eqz p3, :cond_1
 
     .line 519
-    iget-object v0, p1, Landroid/content/res/Configuration;->windowConfiguration:Landroid/app/WindowConfiguration;
+    iget-object v0, p1, Landroid/content/res/OplusBaseConfiguration;->windowConfiguration:Landroid/app/WindowConfiguration;
 
     invoke-virtual {v0}, Landroid/app/WindowConfiguration;->getAppBounds()Landroid/graphics/Rect;
 
@@ -1312,7 +1312,7 @@
 
     .line 520
     .local v0, "currentappbounds":Landroid/graphics/Rect;
-    iget-object v2, p2, Landroid/content/res/Configuration;->windowConfiguration:Landroid/app/WindowConfiguration;
+    iget-object v2, p2, Landroid/content/res/OplusBaseConfiguration;->windowConfiguration:Landroid/app/WindowConfiguration;
 
     invoke-virtual {v2}, Landroid/app/WindowConfiguration;->getAppBounds()Landroid/graphics/Rect;
 
@@ -1332,7 +1332,7 @@
     if-nez v3, :cond_1
 
     .line 523
-    iget-object v3, p2, Landroid/content/res/Configuration;->windowConfiguration:Landroid/app/WindowConfiguration;
+    iget-object v3, p2, Landroid/content/res/OplusBaseConfiguration;->windowConfiguration:Landroid/app/WindowConfiguration;
 
     invoke-virtual {v3}, Landroid/app/WindowConfiguration;->getWindowingMode()I
 
@@ -1342,7 +1342,7 @@
 
     if-ne v3, v4, :cond_1
 
-    iget-object v3, p1, Landroid/content/res/Configuration;->windowConfiguration:Landroid/app/WindowConfiguration;
+    iget-object v3, p1, Landroid/content/res/OplusBaseConfiguration;->windowConfiguration:Landroid/app/WindowConfiguration;
 
     .line 524
     invoke-virtual {v3}, Landroid/app/WindowConfiguration;->getWindowingMode()I

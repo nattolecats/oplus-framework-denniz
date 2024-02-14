@@ -900,7 +900,7 @@
     .local v4, "night":Z
     iget-object v5, v1, Landroid/content/res/OplusMaterialFile;->mBaseResources:Landroid/content/res/IResourcesImplExt;
 
-    invoke-interface {v5}, Landroid/content/res/IResourcesImplExt;->getSystemConfiguration()Landroid/content/res/Configuration;
+    invoke-interface {v5}, Landroid/content/res/IResourcesImplExt;->getSystemConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v5
 

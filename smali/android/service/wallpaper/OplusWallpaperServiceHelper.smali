@@ -258,16 +258,16 @@
 
     move-result-object v2
 
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/OplusBaseConfiguration;
 
     move-result-object v2
 
     .line 136
-    .local v2, "configuration":Landroid/content/res/Configuration;
+    .local v2, "configuration":Landroid/content/res/OplusBaseConfiguration;
     if-eqz v2, :cond_2
 
     .line 137
-    iget v3, v2, Landroid/content/res/Configuration;->uiMode:I
+    iget v3, v2, Landroid/content/res/OplusBaseConfiguration;->uiMode:I
 
     and-int/lit8 v3, v3, 0x30
 
@@ -319,7 +319,7 @@
 
     .line 143
     .end local v1    # "res":Landroid/content/res/Resources;
-    .end local v2    # "configuration":Landroid/content/res/Configuration;
+    .end local v2    # "configuration":Landroid/content/res/OplusBaseConfiguration;
     .end local v3    # "currentNightMode":I
     :cond_2
     return v0

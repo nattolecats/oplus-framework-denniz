@@ -388,10 +388,10 @@
     return v0
 .end method
 
-.method public whitelist onConfigChange(Landroid/view/View;Landroid/content/res/Configuration;)V
+.method public whitelist onConfigChange(Landroid/view/View;Landroid/content/res/OplusBaseConfiguration;)V
     .locals 4
     .param p1, "view"    # Landroid/view/View;
-    .param p2, "configuration"    # Landroid/content/res/Configuration;
+    .param p2, "configuration"    # Landroid/content/res/OplusBaseConfiguration;
 
     .line 192
     if-nez p1, :cond_0
@@ -410,7 +410,7 @@
 
     .line 198
     :cond_1
-    iget-object v0, p2, Landroid/content/res/Configuration;->windowConfiguration:Landroid/app/WindowConfiguration;
+    iget-object v0, p2, Landroid/content/res/OplusBaseConfiguration;->windowConfiguration:Landroid/app/WindowConfiguration;
 
     invoke-virtual {v0}, Landroid/app/WindowConfiguration;->getWindowingMode()I
 
@@ -444,7 +444,7 @@
     .line 200
     iget-object v0, p0, Lcom/oplus/bracket/OplusBracketModeManager;->mBracketRect:Landroid/graphics/Rect;
 
-    iget-object v1, p2, Landroid/content/res/Configuration;->windowConfiguration:Landroid/app/WindowConfiguration;
+    iget-object v1, p2, Landroid/content/res/OplusBaseConfiguration;->windowConfiguration:Landroid/app/WindowConfiguration;
 
     invoke-virtual {v1}, Landroid/app/WindowConfiguration;->getAppBounds()Landroid/graphics/Rect;
 

@@ -315,10 +315,10 @@
 
 
 # virtual methods
-.method public blacklist adjustConfigurationForUser(Landroid/content/ContentResolver;Landroid/content/res/Configuration;I)V
+.method public blacklist adjustConfigurationForUser(Landroid/content/ContentResolver;Landroid/content/res/OplusBaseConfiguration;I)V
     .locals 3
     .param p1, "resolver"    # Landroid/content/ContentResolver;
-    .param p2, "config"    # Landroid/content/res/Configuration;
+    .param p2, "config"    # Landroid/content/res/OplusBaseConfiguration;
     .param p3, "currentUserId"    # I
 
     .line 228
@@ -351,7 +351,7 @@
 
     move-result v1
 
-    iput v1, p2, Landroid/content/res/Configuration;->fontScale:F
+    iput v1, p2, Landroid/content/res/OplusBaseConfiguration;->fontScale:F
 
     .line 235
     .end local v0    # "defValue":F
@@ -474,10 +474,10 @@
     return v1
 .end method
 
-.method public blacklist putConfigurationForUser(Landroid/content/ContentResolver;Landroid/content/res/Configuration;I)Z
+.method public blacklist putConfigurationForUser(Landroid/content/ContentResolver;Landroid/content/res/OplusBaseConfiguration;I)Z
     .locals 4
     .param p1, "resolver"    # Landroid/content/ContentResolver;
-    .param p2, "config"    # Landroid/content/res/Configuration;
+    .param p2, "config"    # Landroid/content/res/OplusBaseConfiguration;
     .param p3, "userId"    # I
 
     .line 192
@@ -526,12 +526,12 @@
     if-nez v0, :cond_2
 
     .line 199
-    invoke-static {p1, p2, v3}, Landroid/provider/Settings$System;->putConfigurationForUser(Landroid/content/ContentResolver;Landroid/content/res/Configuration;I)Z
+    invoke-static {p1, p2, v3}, Landroid/provider/Settings$System;->putConfigurationForUser(Landroid/content/ContentResolver;Landroid/content/res/OplusBaseConfiguration;I)Z
 
     .line 200
     sget v0, Lcom/oplus/multiuser/OplusMultiUserManager;->sMultiSystemUserId:I
 
-    invoke-static {p1, p2, v0}, Landroid/provider/Settings$System;->putConfigurationForUser(Landroid/content/ContentResolver;Landroid/content/res/Configuration;I)Z
+    invoke-static {p1, p2, v0}, Landroid/provider/Settings$System;->putConfigurationForUser(Landroid/content/ContentResolver;Landroid/content/res/OplusBaseConfiguration;I)Z
 
     .line 201
     return v1
